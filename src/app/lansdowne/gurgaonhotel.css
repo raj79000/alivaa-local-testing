@@ -1,0 +1,211 @@
+p{
+
+  font-size: 14px;
+
+}
+
+html, body { 
+  margin: 0; 
+  padding: 0; 
+} 
+* {
+  box-sizing: border-box;
+}
+
+.container{ margin-bottom:0px;}
+.our-offers .offer-name {
+
+  padding: 0.5rem 0px;
+  padding-top:1.5rem;
+
+}
+.mb-tst{ margin-bottom:-14em !important}
+.testimonials_inner_profile img{ width:50px;}
+section{ display:block;}
+
+.banner-section, .room-block {
+
+  display: inline-block;
+
+  width: 100%;
+
+  height: 100%!important;
+
+  position: relative;
+
+}
+
+.banner-img {
+
+  display: inline-block;
+
+  width: 100%;
+
+  height: 92vh;
+
+  object-fit: cover;
+
+}
+
+.rooms-info-block {
+
+ 
+
+  padding: 45px 0 40px;
+
+}
+
+/* .banner-section .content-section{
+
+  top: 40%!important;
+
+} */
+
+@media (max-width: 420px) {
+  .gallery-section.gurgaon-hotel-testimonials{
+    transform: translateY(-50px) !important;
+  }
+  .rooms-info-block.gurgaon-hotel-facilities {
+    transform: translate(0, -80px) !important;
+  }
+  .gallery-section.gurgaon-hotel {
+    display: inline-block;
+    width: 100%;
+    transform: translateY(-150) !important;}
+    .swiper-slide {
+
+      padding: 10px; /* Add padding around the content */
+
+    }
+
+      .swiper-slide .img2{
+           max-height: 280px;
+      }
+
+    .swiper-slide img {
+
+      max-height: 60px; /* Limit image height for mobile */
+
+      width: 100%; /* Ensure the image takes full width */
+
+      object-fit: cover; /* Maintain aspect ratio without stretching */
+
+    }
+
+  
+
+    .offers-text-home {
+
+      margin-top: 10px; /* Adjust the spacing */
+
+    }
+
+  
+
+    .offer-name {
+
+      font-size: 14px; /* Smaller font size for mobile */
+
+      font-weight: bold;
+
+    }
+
+  
+
+    .offer-description {
+
+      font-size: 12px; /* Adjust description font size */
+
+    }
+
+  
+
+    .btn {
+
+      padding: 8px 12px; /* Adjust button padding for mobile */
+
+      font-size: 14px; /* Reduce button font size */
+
+    }
+
+  }
+
+  @keyframes scrollGallery {
+
+    0% {
+
+        transform: translateX(0);
+
+    }
+
+    100% {
+
+        transform: translateX(-100%);
+
+    }
+
+}
+
+
+
+.owl-stage {
+
+    display: flex;
+
+    animation: scrollGallery 20s linear infinite;
+
+}
+
+/* .row-items{
+
+  
+
+  background-image: url(/images/rooms/suite-new-image.webp);
+
+  -webkit-background-size: cover;
+
+  -moz-background-size: cover;
+
+  -o-background-size: cover;
+
+  background-size: cover;
+
+}
+
+
+
+.row-items:hover{
+
+  background-image: url(/images/rooms/superior-room-1.webp);
+
+  -webkit-background-size: cover;
+
+  -moz-background-size: cover;
+
+  -o-background-size: cover;
+
+  background-size: cover;
+
+} */
+
+/* .row-item.elementor-repeater-item-472f7c9.wow.fadeInUp.animated.current-item:hover{
+
+  
+
+  background-image: url(/images/rooms/superior-room-1.webp);
+
+  -webkit-background-size: cover;
+
+  -moz-background-size: cover;
+
+  -o-background-size: cover;
+
+  background-size: cover;
+
+} */
+
+  .gallery-sec-lansdowne .gal-slider img{
+    height:250px;
+    width: 100%!important;
+    object-fit: cover;
+  }
