@@ -51,8 +51,8 @@ const Roomshitesmc = () => {
                   <h3 className="winter-box-heading">{room.title}</h3>
                   <p className="winter-box-para card-texttt">{room.description}</p>
                   <div className="winter-box-btn">
-                    <Link href="/gurgaon-accommodation" className="box-btn know-more">Explore More</Link>
-                    <Link href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id=185914d6-4ebc-48b5-b982-6e81e5eb35b0&type=2&checkInDate=2025-06-01&checkOutDate=2025-06-02&guest=[ac1=2]&roomPropertyID=185914d6-4ebc-48b5-b982-6e81e5eb35b0" className="box-btn book-noww">Book Now</Link>
+                    <Link href="/mcleodganj-accommodation" className="box-btn know-more">Explore More</Link>
+                    <Link href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id=185914d6-4ebc-48b5-b982-6e81e5eb35b0&type=2&checkInDate=2025-05-20&checkOutDate=2025-05-20&guest=[ac1=2]&roomPropertyID=185914d6-4ebc-48b5-b982-6e81e5eb35b0" className="box-btn book-noww">Book Now</Link>
                   </div>
                 </div>
               </div>
