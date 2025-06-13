@@ -6814,8 +6814,28 @@ img.map-marker.social-icon-hoften {
     height: 54% !important;
     bottom: 27px !important;
 }
-  .offertab ul.nav-tabs{ margin-left:0px !important;}
-  .offertab ul.nav-tabs li{ width:33%;}
+  .offertab ul.nav-tabs{ margin-left:0px !important;
+        justify-content: center;
+        gap: 3px;
+    }
+  .offertab ul.nav-tabs li{ 
+            width: 48%;
+        display: grid;
+  }
+  section.new-our-offers.our-offers.about-us {
+    margin-top: 1rem!important;
+}
+.new-our-offers.our-offers div#myTabContent .tab-content .row.my-5{
+    margin-top: 0rem!important;
+    margin-bottom: 1rem!important;
+    padding-top: 0rem!important;
+}
+section.rooms-info-block.gurgaon-hotel-facilities {
+    margin-top: 4rem !important;    margin-bottom: 4rem !important;
+}
+.icon-box.icon-box-body {
+    bottom: 25px !important;
+}
   .offertab ul.nav-tabs li button{ line-height: 15px; padding: 8px;}
     .contact-icons{ margin-top:20px;}
        section.search-content.new-pc-block{ transform:translate(0, 180px) !important}
