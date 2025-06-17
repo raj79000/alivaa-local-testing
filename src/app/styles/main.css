@@ -4806,7 +4806,7 @@ footer h4 {
 .swiper-wrapper.abc {
     display: flex;
     gap: 0px; /* Adds space between slides */
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .swiper-wrapper.abc .swiper-slide {

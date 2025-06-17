@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import { motion } from "framer-motion";
 
@@ -26,14 +27,14 @@ const SpecialOffers = () => {
           >
             <div className="tab-content special-offers about-us new-rj-block text-center">
               <div className="container p-2 g-0">
-                {/* <div className="row align-items-start m-0">
+                <div className="row align-items-start m-0">
                   <div className="col-lg-6 p-0">
                     <div className="alivaa-album">
-                      <img
-                        src="/images/our-offers/alivaa-new-offer-imgg-2.webp"
+                      <Image
+                        src="/offers/limited-time-offer-alivaa-ggn.png"
                         alt="Executive Package"
                         style={{ margin: "auto" }}
-                        width={300}
+                        width={700}
                         height={550}
                         layout="responsive"
                       />
@@ -41,16 +42,20 @@ const SpecialOffers = () => {
                   </div>
 
                   <div className="col-lg-5 offset-lg-1 p-0 text-start executive">
-                    <h3 className="global-heading-about">Executive Package</h3>
+                    <h3 className="global-heading-about">LIMITED TIME OFFER</h3>
 
                     <ul>
                       <li className="li-para">
-                        Up to 50% Off on Best Available Rate
+                        Limited Time Offer: Up to 50% Off Exclusive Deals
                       </li>
+
+                      <li className="li-para">Up to 50% Off on Best Available Rate</li>
 
                       <li className="li-para">Luxe Accommodation</li>
 
-                      <li className="li-para">Breakfast for Two</li>
+                      <li className="li-para">
+                        Breakfast for Two
+                      </li>
 
                       <li className="li-para">
                         20% Discount on Food & Beverage
@@ -59,17 +64,9 @@ const SpecialOffers = () => {
                       <li className="li-para">
                         Free Guaranteed Early check-in & Late check-out
                       </li>
-
-                      <li className="li-para">
-                        Booking Period: 1st Sep to Oct 2024
-                      </li>
-
-                      <li className="li-para">
-                        Stay Period: 1st Sep to Mar 2025
-                      </li>
                     </ul>
 
-                    
+
 
                     <Link
                       href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y"
@@ -83,13 +80,13 @@ const SpecialOffers = () => {
                       Book Now
                     </Link>
                   </div>
-                </div> */}
+                </div>
 
                 <div className="row align-items-start pb-3 pt-4 mx-0 my-5">
                   <div className="col-lg-5 offset-lg-1 mt-4 p-0 order-lg-5">
                     <div className="alivaa-album">
                       <img
-                        src="/images/offer-img-5.webp"
+                        src="/offers/day-use-offer-alivaa-ggn.jpg"
                         alt="Executive Package"
                         layout="responsive"
                         className="img-fluid"
@@ -98,62 +95,38 @@ const SpecialOffers = () => {
                   </div>
 
                   <div className="col-lg-6 ps-5 text-start day-rooms">
-                    <h3 className="global-heading-about">Day Rooms</h3>
+                    <h3 className="global-heading-about">Day Use Rooms</h3>
 
                     <p
                       className="content-boxx"
                       style={{ textAlign: "justify" }}
                     >
-                      Day Use Room 10 AM to 6 PM, Check-in and Check-out on same
-                      day
+                     Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day
                     </p>
 
                     <ul>
-                      <li className="li-para">Starting at INR 2024*</li>
-
-                      <li className="room-only li-para">
-                        Room Only (EP) | Free WiFI | Cancellation Policy:
-                        Non-cancellable, non-refundable and non-amendment for
-                        entire length of stay.
-                      </li>
+                      <li className="li-para">Room Only (EP) | Free WiFI</li>
                     </ul>
-
                     <p
                       className="content-boxx"
                       style={{ textAlign: "justify" }}
                     >
                       Terms and Conditions:
                     </p>
-
                     <ul>
                       <li className="li-para">
-                        8 hour slot to be booked between 10 AM to 6 PM
+                       8-hour slot to be booked between 10 AM to 6 PM
                       </li>
-
                       <li className="li-para">
-                        Check-in is allowed only at or after 10 am, and
-                        check-out is before 6 pm on the same day.
+                        Check-in is allowed only at or after 10 am, and check-out is before 6 pm on the same day.
                       </li>
-
                       <li className="li-para">
-                        Every extra hour utilized post 6 pm will be charged at
-                        50% of the booking value, per hour, subject to room
-                        availability.
+                        Every extra hour utilized post 6 pm will be charged at 50% of the booking value, per hour, subject to room availability.
                       </li>
-
                       <li className="li-para">
-                        A 100 percent advance deposit is required at the time of
-                        reservation
-                      </li>
-
-                      <li className="li-para">
-                        Non-cancellable, non-refundable and non-amendment for
-                        entire length of stay.
+                        20% off on Food & Beverage Services.
                       </li>
                     </ul>
-
-                    {/* Book Now Button */}
-
                     <Link
                       href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y"
                       className="btn  text-white dark-bg rounded-0"
@@ -167,59 +140,6 @@ const SpecialOffers = () => {
                     </Link>
                   </div>
                 </div>
-
-                {/* <div className="row align-items-start pb-3 mx-0 my-5">
-                  <div className="col-lg-5 p-0">
-                    <div className="alivaa-album">
-                      <img
-                        src="/images/offer-img-2.webp"
-                        alt="Executive Package"
-                        layout="responsive"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 offset-lg-1 p-0 text-start staycation">
-                    <h3 className="global-heading-about">
-                      Relax with a Staycation at ALIVAA
-                    </h3>
-
-                    <ul>
-                      <li className="li-para">
-                        Free breakfast is included on both the day of arrival
-                        (check-in) and the day of departure (check-out).
-                      </li>
-
-                      <li className="li-para">
-                        Guaranteed Early check-in & Late check-out
-                      </li>
-
-                      <li className="li-para">15% Discount On F&B Services</li>
-
-                      <li className="li-para">
-                        Complimentary Access to GYM / Swimming pool
-                      </li>
-
-                      <li className="li-para">
-                        Validity: July 2024 - March 2025
-                      </li>
-                    </ul>
-
-
-                    <Link
-                      href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y"
-                      className="btn text-white dark-bg rounded-0"
-                      style={{
-                        borderColor: "#000",
-                        backgroundColor: "#002d62",
-                      }}
-                      id="book-now"
-                    >
-                      Book Now
-                    </Link>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -229,205 +149,53 @@ const SpecialOffers = () => {
             role="tabpanel"
             style={{ textAlign: "center" }}
           >
-            <img
-              src="/images/comingsoon.png"
-              className="search-iconimage"
-              alt="Search Icon"
-            />
-            <div className="tab-content special-offers about-us new-rj-block text-center d-none">
+            <div className="tab-content special-offers about-us new-rj-block text-center">
               <div className="container p-2 g-0">
-                {/* <div className="row align-items-start m-0">
-                  <div className="col-lg-6 p-0">
-                    <div className="alivaa-album">
-                      <img
-                        src="/images/our-offers/alivaa-new-offer-imgg-2.webp"
-                        alt="Executive Package"
-                        style={{ margin: "auto" }}
-                        width={300}
-                        
-                        layout="responsive"
-                      />
-                    </div>
-                  </div>
+                <div className="row align-items-start m-0">
+                      <div className="col-lg-6 p-0">
+                        <div className="alivaa-album">
+                          <Image
+                            src="/offers/limited-time-offer-alivaa-mc.png"
+                            alt="Executive Package"
+                            style={{ margin: "auto" }}
+                            width={700}
+                            height={550}
+                            layout="responsive"
+                          />
+                        </div>
+                      </div>
 
-                  <div className="col-lg-5 offset-lg-1 p-0 text-start executive">
-                    <h3 className="global-heading-about">Executive Package</h3>
-
-                    <ul>
-                      <li className="li-para">
-                        Up to 50% Off on Best Available Rate
-                      </li>
-
-                      <li className="li-para">Luxe Accommodation</li>
-
-                      <li className="li-para">Breakfast for Two</li>
-
-                      <li className="li-para">
-                        20% Discount on Food & Beverage
-                      </li>
-
-                      <li className="li-para">
-                        Free Guaranteed Early check-in & Late check-out
-                      </li>
-
-                      <li className="li-para">
-                        Booking Period: 1st Sep to Oct 2024
-                      </li>
-
-                      <li className="li-para">
-                        Stay Period: 1st Sep to Mar 2025
-                      </li>
-                    </ul>
-
-
-                    <Link
-                      href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y"
-                      className="btn text-white dark-bg rounded-0"
-                      style={{
-                        borderColor: "#000",
-                        backgroundColor: "#002d62",
-                      }}
-                      id="book-now"
-                    >
-                      Book Now
-                    </Link>
-                  </div>
-                </div> */}
-
-                <div className="row align-items-start pb-3 pt-4 mx-0 my-5">
-                  <div className="col-lg-5 offset-lg-1 mt-4 p-0 order-lg-5">
-                    <div className="alivaa-album">
-                      <img
-                        src="/images/offer-img-5.webp"
-                        alt="Executive Package"
-                        layout="responsive"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 ps-5 text-start day-rooms">
-                    <h3 className="global-heading-about">Day Rooms</h3>
-
-                    <p
-                      className="content-boxx"
-                      style={{ textAlign: "justify" }}
-                    >
-                      Day Use Room 10 AM to 6 PM, Check-in and Check-out on same
-                      day
-                    </p>
-
-                    <ul>
-                      <li className="li-para">Starting at INR 2024*</li>
-
-                      <li className="room-only li-para">
-                        Room Only (EP) | Free WiFI | Cancellation Policy:
-                        Non-cancellable, non-refundable and non-amendment for
-                        entire length of stay.
-                      </li>
-                    </ul>
-
-                    <p
-                      className="content-boxx"
-                      style={{ textAlign: "justify" }}
-                    >
-                      Terms and Conditions:
-                    </p>
-
-                    <ul>
-                      <li className="li-para">
-                        8 hour slot to be booked between 10 AM to 6 PM
-                      </li>
-
-                      <li className="li-para">
-                        Check-in is allowed only at or after 10 am, and
-                        check-out is before 6 pm on the same day.
-                      </li>
-
-                      <li className="li-para">
-                        Every extra hour utilized post 6 pm will be charged at
-                        50% of the booking value, per hour, subject to room
-                        availability.
-                      </li>
-
-                      <li className="li-para">
-                        A 100 percent advance deposit is required at the time of
-                        reservation
-                      </li>
-
-                      <li className="li-para">
-                        Non-cancellable, non-refundable and non-amendment for
-                        entire length of stay.
-                      </li>
-                    </ul>
-
-                    {/* Book Now Button */}
-
-                    <Link
-                      href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y"
-                      className="btn  text-white dark-bg rounded-0"
-                      style={{
-                        borderColor: "#000",
-                        backgroundColor: "#002d62",
-                      }}
-                      id="book-now"
-                    >
-                      Book Now
-                    </Link>
-                  </div>
+                      <div className="col-lg-5 offset-lg-1 p-0 text-start executive">
+                        <h3 className="global-heading-about">Limited Time Offer</h3>
+                        <ul>
+                          <li className="li-para">
+                            Up to 50% Off Exclusive Deals
+                          </li>
+                          <li className="li-para">Up to 50% Off on Best Available Rate</li>
+                          <li className="li-para">Luxe Accommodation</li>
+                          <li className="li-para">
+                            Breakfast for Two
+                          </li>
+                          <li className="li-para">
+                            20% Discount on Food & Beverage
+                          </li>
+                          <li className="li-para">
+                            Free Guaranteed Early check-in & Late check-out
+                          </li>
+                        </ul>
+                        <Link
+                          href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id=185914d6-4ebc-48b5-b982-6e81e5eb35b0&type=2&checkInDate=2025-05-20&checkOutDate=2025-05-20&guest=[ac1=2]&roomPropertyID=185914d6-4ebc-48b5-b982-6e81e5eb35b0"
+                          className="btn text-white dark-bg rounded-0"
+                          style={{
+                            borderColor: "#000",
+                            backgroundColor: "#002d62",
+                          }}
+                          id="book-now"
+                        >
+                          Book Now
+                        </Link>
+                      </div>
                 </div>
-
-                {/* <div className="row align-items-start pb-3 mx-0 my-5">
-                  <div className="col-lg-5 p-0">
-                    <div className="alivaa-album">
-                      <img
-                        src="/images/offer-img-2.webp"
-                        alt="Executive Package"
-                        layout="responsive"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 offset-lg-1 p-0 text-start staycation">
-                    <h3 className="global-heading-about">
-                      Relax with a Staycation at ALIVAA
-                    </h3>
-
-                    <ul>
-                      <li className="li-para">
-                        Free breakfast is included on both the day of arrival
-                        (check-in) and the day of departure (check-out).
-                      </li>
-
-                      <li className="li-para">
-                        Guaranteed Early check-in & Late check-out
-                      </li>
-
-                      <li className="li-para">15% Discount On F&B Services</li>
-
-                      <li className="li-para">
-                        Complimentary Access to GYM / Swimming pool
-                      </li>
-
-                      <li className="li-para">
-                        Validity: July 2024 - March 2025
-                      </li>
-                    </ul>
-
-                    <Link
-                      href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y"
-                      className="btn text-white dark-bg rounded-0"
-                      style={{
-                        borderColor: "#000",
-                        backgroundColor: "#002d62",
-                      }}
-                      id="book-now"
-                    >
-                      Book Now
-                    </Link>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -438,52 +206,67 @@ const SpecialOffers = () => {
             role="tabpanel"
             style={{ textAlign: "center" }}
           >
-            <img
-              src="/images/comingsoon.png"
-              className="search-iconimage"
-              alt="Search Icon"
-            />
-            <div className="tab-content special-offers about-us new-rj-block text-center d-none">
-              <div className="row align-items-start m-0  pb-3 mb-5">
-                <div className="col-lg-5 p-0">
-                  <div className="alivaa-album">
-                    <img
-                      src="/images/hoften-offer-3.jpg"
-                      alt="Executive Package"
-                      layout="responsive"
-                      className="img-fluid"
-                    />
+            <div className="tab-content special-offers about-us new-rj-block text-center">
+              
+              <div className="row align-items-start pb-3">
+                  <div className="col-lg-5 offset-lg-1 mt-4 p-0 order-lg-5">
+                    <div className="alivaa-album">
+                      <img
+                        src="/offers/day-use-offer-hoften-ggn.jpg"
+                        alt="Executive Package"
+                        layout="responsive"
+                        className="img-fluid"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="col-lg-6 offset-lg-1 p-1 text-start">
-                  <h3 className="global-heading-about">Introductory offer</h3>
+                  <div className="col-lg-6 ps-5 text-start day-rooms">
+                    <h3 className="global-heading-about">Day Use Rooms</h3>
 
-                  <ul>
-                    <li>25% off on Best Available Rate</li>
+                    <p
+                      className="content-boxx"
+                      style={{ textAlign: "justify" }}
+                    >
+                     Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day
+                    </p>
 
-                    <li>
-                      ⁠Additional 10% discount for Logged-in users and mobile
-                      users
-                    </li>
-
-                    <li>⁠Booking Period : Nov to Mar 2025</li>
-
-                    <li>⁠Stay Period : Nov to Mar 2025</li>
-                  </ul>
-
-                  {/* Book Now Button */}
-
-                  <Link
-                    href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y"
-                    className="btn text-white dark-bg rounded-0 m-2"
-                    style={{ borderColor: "#000", backgroundColor: "#002d62" }}
-                    id="book-now"
-                  >
-                    Book Now
-                  </Link>
-                </div>
+                    <ul>
+                      <li className="li-para">Room Only (EP) | Free WiFI</li>
+                    </ul>
+                    <p
+                      className="content-boxx"
+                      style={{ textAlign: "justify" }}
+                    >
+                      Terms and Conditions:
+                    </p>
+                    <ul>
+                      <li className="li-para">
+                       8-hour slot to be booked between 10 AM to 6 PM
+                      </li>
+                      <li className="li-para">
+                        Check-in is allowed only at or after 10 am, and check-out is before 6 pm on the same day.
+                      </li>
+                      <li className="li-para">
+                        Every extra hour utilized post 6 pm will be charged at 50% of the booking value, per hour, subject to room availability.
+                      </li>
+                      <li className="li-para">
+                        20% off on Food & Beverage Services.
+                      </li>
+                    </ul>
+                    <Link
+                      href="https://bookings.alivaahotels.com/inst/#/home?propertyId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=&JDRN=Y&RoomID=210380,210381,210383,210384,210385&ap=1&gsId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM="
+                      className="btn  text-white dark-bg rounded-0"
+                      style={{
+                        borderColor: "#000",
+                        backgroundColor: "#002d62",
+                      }}
+                      id="book-now"
+                    >
+                      Book Now
+                    </Link>
+                  </div>
               </div>
+
             </div>
           </div>
 
@@ -493,15 +276,68 @@ const SpecialOffers = () => {
             role="tabpanel"
             style={{ textAlign: "center" }}
           >
-            <img
-              src="/images/comingsoon.png"
-              className="search-iconimage"
-              alt="Search Icon"
-            />
-            
+             <div className="tab-content special-offers about-us new-rj-block text-center">
+              <div className="container p-2 g-0">
+                <div className="row align-items-start m-0">
+                      <div className="col-lg-6 p-0">
+                        <div className="alivaa-album">
+                          <Image
+                            src="/offers/limited-time-offer-alivaa-lns.png"
+                            alt="Executive Package"
+                            style={{ margin: "auto" }}
+                            width={700}
+                            height={550}
+                            layout="responsive"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="col-lg-5 offset-lg-1 p-0 text-start executive">
+                        <h3 className="global-heading-about">Limited Time Offer</h3>
+
+                        <ul>
+                          <li className="li-para">
+                            Up to 50% Off Exclusive Deals
+                          </li>
+
+                          <li className="li-para">Up to 50% Off on Best Available Rate</li>
+
+                          <li className="li-para">Luxe Accommodation</li>
+
+                          <li className="li-para">
+                            Breakfast for Two
+                          </li>
+
+                          <li className="li-para">
+                            20% Discount on Food & Beverage
+                          </li>
+
+                          <li className="li-para">
+                            Free Guaranteed Early check-in & Late check-out
+                          </li>
+                        </ul>
+
+
+
+                        <Link
+                          href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY="
+                          className="btn text-white dark-bg rounded-0"
+                          style={{
+                            borderColor: "#000",
+                            backgroundColor: "#002d62",
+                          }}
+                          id="book-now"
+                        >
+                          Book Now
+                        </Link>
+                      </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          
+
         </div>
       </div>
     </motion.section>
