@@ -16,6 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 
 import "swiper/css/navigation";
+import Link from "next/link";
 
 import NavbarAliva from "app/components/NavbarAliva";
 import BookNowForm from "app/booking-engine-widget/BookNowForm";
@@ -239,6 +240,52 @@ export default function GurgaonHotelPage() {
           {/* <section className="your-break pt-0 exp1 d-none">
    <ExperienceSlider />      
    </section> */}
+
+          <section className="your-break mtn12 sec-padding mt-5 alivaa-inner-offer-section-overview">
+              <motion.section className="our-offers about-us alivaa-new-offers-see"
+                initial={{ opacity: 0, y: -150 }}
+                animate={{ opacity: 1, x: 0, y: -100 }}
+                transition={{ duration: 0.6, delay: 0.6 }}>
+                <div className="container">
+                    <h4 className="global-heading-gurgaon inner-hd text-center" style={{ color: "#4a4a4a" }}>Special Offers</h4>
+                    
+                    <div className="tab-content" id="myTabContent"
+                        initial={{ opacity: 0, y: -150 }}
+                        animate={{ opacity: 1, x: 0, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}>
+                        <div className="tab-pane fade show active overview-alivaa-offer-slider" id="all" role="tabpanel">
+                            <Swiper
+                                modules={[Navigation]}
+                                navigation
+                                loop={true}
+                                spaceBetween={10}
+                                slidesPerView={1}
+                                breakpoints={{
+                                    600: { slidesPerView: 2 },
+                                    900: { slidesPerView: 3 },
+                                    1200: { slidesPerView: 3 },
+                                }}>
+                                <div className="swiper-wrapper justify-content-center" >
+                                    
+                                    <SwiperSlide>
+                                        <img src="/offers/limited-time-offer-alivaa-lns1.png" className="img-fluid w-100 w-100 img2" alt="Alivaa Images" />
+                                        <div className="text-center">
+                                            <div className="offers-text-home">
+                                                <h6 className="offer-name"> Limited Time Offer</h6>
+                                                <p className="offer-description">
+                                                    Up to 50% Off Exclusive Deals
+                                                </p>
+                                            </div>
+                                            <Link href="/lansdowne-hotel-offers" className="btn btn-primary voffset-2 cls-relax-offer">View Offer</Link>
+                                        </div>
+                                    </SwiperSlide>
+                                </div>
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
+              </motion.section>
+          </section>
 
           <section className="sec-padding lansdowne-room-sec-new">
             <motion.section

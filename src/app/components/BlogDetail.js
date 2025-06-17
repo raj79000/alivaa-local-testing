@@ -47,19 +47,21 @@ export default function BlogDetail({ blog, relatedBlogs }) {
               </div>
 
               <div className="col-lg-4">
-                <ContactForm />
-                <div className="blog-list-sidebar">
-                  <ul className="blog-list-sidebar-ul">
-                    {relatedBlogs?.map((item) => (
-                      <li key={item.id} className="blog-list-sidebar-li">
-                        <FontAwesomeIcon icon={faDotCircle} />
-                        <Link href={`/${item.urlslug}`} className="blog-list-link">
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  <div className="blog-list-sidebar-box-fixed">
+                    <ContactForm />
+                    <div className="blog-list-sidebar">
+                      <ul className="blog-list-sidebar-ul">
+                        {relatedBlogs?.map((item) => (
+                          <li key={item.id} className="blog-list-sidebar-li">
+                            <FontAwesomeIcon icon={faDotCircle} />
+                            <Link href={`/${item.urlslug}`} className="blog-list-link">
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>

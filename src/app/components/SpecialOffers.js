@@ -207,64 +207,66 @@ const SpecialOffers = () => {
             style={{ textAlign: "center" }}
           >
             <div className="tab-content special-offers about-us new-rj-block text-center">
-              
-              <div className="row align-items-start pb-3">
-                  <div className="col-lg-5 offset-lg-1 mt-4 p-0 order-lg-5">
+              <div className="container p-2 g-0">
+                <div className="row align-items-start pb-3 pt-0 mx-0">
+                  <div className="col-lg-6 mt-4 p-0">
                     <div className="alivaa-album">
                       <img
-                        src="/offers/day-use-offer-hoften-ggn.jpg"
-                        alt="Executive Package"
-                        layout="responsive"
-                        className="img-fluid"
-                      />
+                          src="/offers/day-use-offer-hoften-ggn.jpg"
+                          alt="Executive Package"
+                          layout="responsive"
+                          className="img-fluid"
+                        />
                     </div>
                   </div>
 
                   <div className="col-lg-6 ps-5 text-start day-rooms">
                     <h3 className="global-heading-about">Day Use Rooms</h3>
 
-                    <p
-                      className="content-boxx"
-                      style={{ textAlign: "justify" }}
-                    >
-                     Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day
-                    </p>
+                      <p
+                        className="content-boxx"
+                        style={{ textAlign: "justify" }}
+                      >
+                      Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day
+                      </p>
 
-                    <ul>
-                      <li className="li-para">Room Only (EP) | Free WiFI</li>
-                    </ul>
-                    <p
-                      className="content-boxx"
-                      style={{ textAlign: "justify" }}
-                    >
-                      Terms and Conditions:
-                    </p>
-                    <ul>
-                      <li className="li-para">
-                       8-hour slot to be booked between 10 AM to 6 PM
-                      </li>
-                      <li className="li-para">
-                        Check-in is allowed only at or after 10 am, and check-out is before 6 pm on the same day.
-                      </li>
-                      <li className="li-para">
-                        Every extra hour utilized post 6 pm will be charged at 50% of the booking value, per hour, subject to room availability.
-                      </li>
-                      <li className="li-para">
-                        20% off on Food & Beverage Services.
-                      </li>
-                    </ul>
-                    <Link
-                      href="https://bookings.alivaahotels.com/inst/#/home?propertyId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=&JDRN=Y&RoomID=210380,210381,210383,210384,210385&ap=1&gsId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM="
-                      className="btn  text-white dark-bg rounded-0"
-                      style={{
-                        borderColor: "#000",
-                        backgroundColor: "#002d62",
-                      }}
-                      id="book-now"
-                    >
-                      Book Now
-                    </Link>
+                      <ul>
+                        <li className="li-para">Room Only (EP) | Free WiFI</li>
+                      </ul>
+                      <p
+                        className="content-boxx"
+                        style={{ textAlign: "justify" }}
+                      >
+                        Terms and Conditions:
+                      </p>
+                      <ul>
+                        <li className="li-para">
+                        8-hour slot to be booked between 10 AM to 6 PM
+                        </li>
+                        <li className="li-para">
+                          Check-in is allowed only at or after 10 am, and check-out is before 6 pm on the same day.
+                        </li>
+                        <li className="li-para">
+                          Every extra hour utilized post 6 pm will be charged at 50% of the booking value, per hour, subject to room availability.
+                        </li>
+                        <li className="li-para">
+                          20% off on Food & Beverage Services.
+                        </li>
+                      </ul>
+                      <Link
+                        href="https://bookings.alivaahotels.com/inst/#/home?propertyId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=&JDRN=Y&RoomID=210380,210381,210383,210384,210385&ap=1&gsId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM="
+                        className="btn  text-white dark-bg rounded-0"
+                        style={{
+                          borderColor: "#000",
+                          backgroundColor: "#002d62",
+                        }}
+                        id="book-now"
+                      >
+                        Book Now
+                      </Link>
                   </div>
+                </div>
+
               </div>
 
             </div>

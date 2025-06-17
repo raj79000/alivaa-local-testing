@@ -11,20 +11,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from "next/link";
 import { motion } from "framer-motion";
-// import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-import HeaderAlivaa from "../components/HeaderAlivaa";
-import BookingFormInner from "../components/BookingFormInner";
 import { useState } from "react";
 import { FormProvider } from "app/booking-engine-widget/FormContext";
 import BookNowForm from "app/booking-engine-widget/BookNowForm";
+import HeaderLansdowne from "app/components/HeaderLansdowne";
 export default function GurgaonHotelOffersPage (){
   const [isVisible, setIsVisible] = useState(false);
     return (
 <>
 <section className='home-hdr-hght'>
 <NavbarAliva/>
-<HeaderAlivaa />
+<HeaderLansdowne></HeaderLansdowne>
 </section>
 <section className="banner-section">
 <img
@@ -61,7 +58,7 @@ export default function GurgaonHotelOffersPage (){
 </section>
       <div className="container text-center sectiontop">
         <h1 className="global-heading-gurgaon inner-hd">
-        Gurgaon Hotel Offers & Deals
+        Lansdowne Hotel Offers & Deals
         </h1>
         <p className="content-boxx">
         Welcome to Alivaa Hotels & Resorts, where luxury and comfort blend seamlessly to create an unforgettable stay. Our meticulously designed accommodations offer a diverse range of options, from spacious suites with breathtaking city views to intimate rooms perfect for relaxation. Each room is thoughtfully curated with elegant décor and modern amenities to ensure your utmost comfort. Whether you are visiting for business or leisure, Alivaa Hotels & Resorts provides the perfect retreat, promising an exceptional experience meets all your requirements.
@@ -74,12 +71,12 @@ export default function GurgaonHotelOffersPage (){
         <div className="tab-content mt-3" >
             <div className="tab-pane fade show active">
                 <div className="special-offers about-us new-rj-block text-center">
-                    <div className="container">
-                        <div className="row align-items-start m-0">
+                    <div className="container pb-4">
+                        <div className="row align-items-start m-0 pb-5">
                             <div className="col-lg-6 p-0" >
                                 <div className="alivaa-album">
                                     <img
-                                    src="/offers/limited-time-offer-alivaa-ggn.png"
+                                    src="/offers/limited-time-offer-alivaa-lns.png"
                                     alt="Executive Package"
                                     width={600}
                                     height={400}
@@ -98,44 +95,12 @@ export default function GurgaonHotelOffersPage (){
                                     <li>Free Guaranteed Early check-in & Late check-out</li>
                                     
                                 </ul>
-                                <Link href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y" className="btn book-now-headerr" style={{ borderColor: '#000' }} id="book-now">
+                                <Link href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=" className="btn book-now-headerr" style={{ borderColor: '#000' }} id="book-now">
                                     Book Now
                                 </Link>
                             </div>
                         </div>
-                        <div className="row align-items-start mx-0 my-5">
-                            <div className="col-lg-5 offset-lg-1 p-0 order-lg-5" 
-                                >
-                                <div className="alivaa-album">
-                                    <img
-                                    src="/offers/day-use-offer-alivaa-ggn.jpg"
-                                    alt="Executive Package"
-                                    layout="responsive"
-                                    className="img-fluid"
-                                    />
-                                </div>
-                            </div>
-                            <div className="col-lg-6 ps-5 text-start dayrooms-sec-offers-para" id="dayrooms-offer"
-                              >
-                                <h3 className="global-heading">Day Use Rooms</h3>
-                                <p  className="content-boxx" style={{textAlign: "justify"}}>Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day</p>
-                                <ul>
-                                    <li>Room Only (EP) | Free WiFI</li>
-                                </ul>
-                                <p className="m-0"  style={{textAlign: "justify"}}>Terms and Conditions:</p>
-                                <ul>
-                                    <li  style={{textAlign: "justify"}}> 8-hour slot to be booked between 10 AM to 6 PM</li>
-                                    <li  style={{textAlign: "justify"}}>Check-in is allowed only at or after 10 am, and check-out is before 6 pm on the same day.</li>
-                                    <li  style={{textAlign: "justify"}}>Every extra hour utilized post 6 pm will be charged at 50% of the booking value, per hour, subject to room availability.</li>
-                                    <li  style={{textAlign: "justify"}}>20% off on Food & Beverage Services.</li>
-                                </ul>
-                                {/* Book Now Button */}
-                                <Link href="https://bookings.alivaahotels.com/inst/#home?propertyId=602NTH6uajze8sE7Uan5lAKiNeraeUF6qvaE3NTc=&JDRN=Y" className="btn book-now-headerr" style={{ borderColor: '#000' }} id="book-now">
-                                    Book Now
-                                </Link>
-                            </div>
-                        </div>
-                        
+                      
                     </div>
                 </div>
             </div>

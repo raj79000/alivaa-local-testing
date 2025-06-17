@@ -74,8 +74,8 @@ const HeaderMcLeodganj = () => {
                 <li><Link href="/mcleodganj-accommodation">Room & Suites</Link></li>
                 <li><Link href="/mcleodganj-dining">Dining</Link></li>
                 <li><Link href="/mcleodganj-facilities">Facilities</Link></li>
-                {/* <li><Link href="/gurgaon-hotel-offers">Offers</Link></li>
-                <li><Link href="/gurgaon-attractions">Attractions</Link></li>
+                <li><Link href="/mcleodganj-hotel-offers">Offers</Link></li>
+                {/* <li><Link href="/gurgaon-attractions">Attractions</Link></li>
                 <li><Link href="/blog">Blogs</Link></li> */}
                 <li><Link href="/mcleodganj-gallery">Gallery</Link></li>
                 <li><Link href="/mcleodganj-contact">Contact Us</Link></li>

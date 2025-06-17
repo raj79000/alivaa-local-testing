@@ -39,6 +39,7 @@ const HeaderLansdowne = () => {
   };
 
   return (
+
     <header className="clearHeader mob_design neww-aliva-headerr">
       <div id="navbar">
         <div className="container-fluid">
@@ -75,7 +76,7 @@ const HeaderLansdowne = () => {
                 <li><Link href="/lansdowne-dining">Dining</Link></li>
                 <li><Link href="/lansdowne-facilities">Facilities</Link></li>
                 <li><Link href="/lansdowne-meeting-events">Meeting & Events</Link></li>
-                {/* <li><Link href="/lansdowne-attractions">Attractions</Link></li> */}
+                <li><Link href="/lansdowne-hotel-offers">Offers</Link></li>
                 {/* <li><Link href="/blog">Blogs</Link></li> */}
                 <li><Link href="/lansdowne-gallery">Gallery</Link></li>
                 <li><Link href="/lansdowne-contact">Contact Us</Link></li>

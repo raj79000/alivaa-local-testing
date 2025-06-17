@@ -18,7 +18,7 @@ import "./mcleodganj.css";
 import { motion } from "framer-motion";
 
 import GurgaonHotelExtended from '../components/GurgaonHotelExtended';
-import McHotelExtended  from "app/components/mcleodganjHotelExtended";
+import McHotelExtended from "app/components/mcleodganjHotelExtended";
 
 import Link from 'next/link';
 
@@ -54,166 +54,166 @@ export default function mcleodganj() {
 
     const [isVisible, setIsVisible] = useState(false);
 
-   const [isExpanded, setIsExpanded] = useState(false); 
+    const [isExpanded, setIsExpanded] = useState(false);
 
-   const [img, setImg] = useState(); 
+    const [img, setImg] = useState();
 
-   const [bgImage, setBgImage] = useState("/images/rooms/suite-new-image.webp");
+    const [bgImage, setBgImage] = useState("/images/rooms/suite-new-image.webp");
 
-   
 
-  const offersSwiperRef = useRef(null);
 
-  const facilitiesSwiperRef = useRef(null);
+    const offersSwiperRef = useRef(null);
 
-  
+    const facilitiesSwiperRef = useRef(null);
 
-//   const sliderRef = useRef(null);
 
-  
 
-//   const [isVisible, setIsVisible] = useState(false);
+    //   const sliderRef = useRef(null);
 
-//   useEffect(() => {
+
+
+    //   const [isVisible, setIsVisible] = useState(false);
+
+    //   useEffect(() => {
 
     // if (typeof window !== 'undefined') {
 
     //     import('bootstrap/dist/js/bootstrap.bundle.min.js');
 
-    
+
 
     if (offersSwiperRef.current) {
 
-      new Swiper(offersSwiperRef.current, {
+        new Swiper(offersSwiperRef.current, {
 
-        loop: true,
+            loop: true,
 
-        slidesPerView: 3,
+            slidesPerView: 3,
 
-        spaceBetween: 5,
+            spaceBetween: 5,
 
-        // responsive: true,
+            // responsive: true,
 
-        breakpoints:{
+            breakpoints: {
 
-            320: { slidesPerView: 1 }, // 1 slide for small screens
+                320: { slidesPerView: 1 }, // 1 slide for small screens
 
-            480: { slidesPerView: 1 }, // 1 slide for mobile
+                480: { slidesPerView: 1 }, // 1 slide for mobile
 
-            768: { slidesPerView: 2 }, // 2 slides for tablets
+                768: { slidesPerView: 2 }, // 2 slides for tablets
 
-            1024: { slidesPerView: 3 }, // 3 slides for larger screens
+                1024: { slidesPerView: 3 }, // 3 slides for larger screens
 
-          },
+            },
 
-        autoplay: {
+            autoplay: {
 
-            delay: 3000,
+                delay: 3000,
 
-            disableOnInteraction: false,
+                disableOnInteraction: false,
 
-          },
+            },
 
-          
 
-         pagination: false,
 
-        modules: [Navigation,Pagination, Autoplay],
+            pagination: false,
 
-      });
+            modules: [Navigation, Pagination, Autoplay],
+
+        });
 
     }
 
-      if(facilitiesSwiperRef.current){
+    if (facilitiesSwiperRef.current) {
 
-       new Swiper(facilitiesSwiperRef.current, {
+        new Swiper(facilitiesSwiperRef.current, {
 
-         loop: true,
+            loop: true,
 
-         slidesPerView: 3,
+            slidesPerView: 3,
 
-         spaceBetween: 5,
+            spaceBetween: 5,
 
-         breakpoints:{
+            breakpoints: {
 
-             320: { slidesPerView: 1 }, // 1 slide for small screens
+                320: { slidesPerView: 1 }, // 1 slide for small screens
 
-             480: { slidesPerView: 1 }, // 1 slide for mobile
+                480: { slidesPerView: 1 }, // 1 slide for mobile
 
-             768: { slidesPerView: 2 }, // 2 slides for tablets
+                768: { slidesPerView: 2 }, // 2 slides for tablets
 
-             1024: { slidesPerView: 3 }, // 3 slides for larger screens
+                1024: { slidesPerView: 3 }, // 3 slides for larger screens
 
-           },
+            },
 
-         autoplay: {
+            autoplay: {
 
-             delay: 3000,
+                delay: 3000,
 
-             disableOnInteraction: false,
+                disableOnInteraction: false,
 
-           },
+            },
 
-          pagination: false,
+            pagination: false,
 
-         modules: [Navigation,Pagination, Autoplay],
+            modules: [Navigation, Pagination, Autoplay],
 
-       });
+        });
 
-     }
+    }
 
-// }
+    // }
 
-//   }, []);
+    //   }, []);
 
-  const handleMouseEnter = (image) => {
+    const handleMouseEnter = (image) => {
 
-    setBgImage(image);
+        setBgImage(image);
 
-  };
+    };
 
 
 
-  const handleMouseLeave = () => {
+    const handleMouseLeave = () => {
 
-    setBgImage("/images/rooms/suite-new-image.webp"); // Default background
+        setBgImage("/images/rooms/suite-new-image.webp"); // Default background
 
-  };
+    };
 
     return (
 
-      <>
-<section className='home-hdr-hght'>
-   
-   <NavbarAliva></NavbarAliva>
-   
-   <HeaderMcLeodganj/>
-   </section>
- <section className="banner-section" >
- <img
-       src="/images/mcleodganj/mcloedganjbanner.png"
-          alt="Hotels in Gurgaon"
-           className="banner-img pt-0"
-        />
-   
-   <div className="social-icon-banner">
-           <a className="btn btn-social" href="https://www.facebook.com/profile.php?id=61560140841449&amp;mibextid=ZbWKwL" target="_blank">
-             <img src="/images/fb-icon.svg" height="25" width="25" alt="social-icon" className="social-icon" />
-           </a>
-         
-           <a className="btn btn-social" href="https://www.instagram.com/alivaahotels/" target="_blank">
-             <img src="/images/instagram-icon.svg" height="25" width="25" alt="social-icon" className="social-icon" />
-           </a>
-          
-           <a className="btn btn-social" href="https://www.linkedin.com/company/alivaa-hotels-resorts/" target="_blank">
-           <img src="/images/linkedin-icon.svg" height="25" width="25" alt="social-icon" className="social-icon" />
-           </a>
-          
-         </div>
-         <span className="updown-arrow">
-         <img src="images/down-arrow.png"/>
-       </span>
-   {/* { !isVisible && (<div className="content-section">
+        <>
+            <section className='home-hdr-hght'>
+
+                <NavbarAliva></NavbarAliva>
+
+                <HeaderMcLeodganj />
+            </section>
+            <section className="banner-section" >
+                <img
+                    src="/images/mcleodganj/mcloedganjbanner.png"
+                    alt="Hotels in Gurgaon"
+                    className="banner-img pt-0"
+                />
+
+                <div className="social-icon-banner">
+                    <a className="btn btn-social" href="https://www.facebook.com/profile.php?id=61560140841449&amp;mibextid=ZbWKwL" target="_blank">
+                        <img src="/images/fb-icon.svg" height="25" width="25" alt="social-icon" className="social-icon" />
+                    </a>
+
+                    <a className="btn btn-social" href="https://www.instagram.com/alivaahotels/" target="_blank">
+                        <img src="/images/instagram-icon.svg" height="25" width="25" alt="social-icon" className="social-icon" />
+                    </a>
+
+                    <a className="btn btn-social" href="https://www.linkedin.com/company/alivaa-hotels-resorts/" target="_blank">
+                        <img src="/images/linkedin-icon.svg" height="25" width="25" alt="social-icon" className="social-icon" />
+                    </a>
+
+                </div>
+                <span className="updown-arrow">
+                    <img src="images/down-arrow.png" />
+                </span>
+                {/* { !isVisible && (<div className="content-section">
        <div className="container position-relative">
          <div className="col-lg-12 text-center wow fadeInDown" data-wow-duration="4s">
            <button className="btn desktop-button corporatebannerbutton btm15" id="book-now1" onClick={() => setIsVisible(!isVisible)}>
@@ -223,647 +223,569 @@ export default function mcleodganj() {
          </div>
        </div>
      </div>) } */}
-     
- </section>
- 
 
-     
- {/* <section className={`booking-form-section ${isVisible ? "slide-in" : "slide-out"}`} id="booking-engine">
+            </section>
+
+
+
+            {/* <section className={`booking-form-section ${isVisible ? "slide-in" : "slide-out"}`} id="booking-engine">
   
  <BookingForm />
 
  </section> */}
 
-       <section className="booking-form-section">
+            <section className="booking-form-section">
 
 
-                         <BookNowForm />
-                
-                       </section>  
+                <BookNowForm />
 
-            
-      <section className="your-break about-us sec-padding">     
+            </section>
 
 
-  <div className="container">
+            <section className="your-break about-us sec-padding">
 
-                
-<div className="search-content about-us new-rj-block text-center">
-                    
-                            
+
+                <div className="container">
+
+
+                    <div className="search-content about-us new-rj-block text-center">
+
+
 
                         <div className="container gurgaon-hotel">
 
-                            
-                        <h2 id="gurgaon-hotel" className="global-heading-gurgaon inner-hd pt-3">Welcome to Alivaa Hotel, McLeodganj</h2>
+
+                            <h2 id="gurgaon-hotel" className="global-heading-gurgaon inner-hd pt-3">Welcome to Alivaa Hotel, McLeodganj</h2>
 
                             <h1 id="gurgaon-hotel" className="global-heading-gurgaon sub-head">Hotel in Mcleodganj, Dharamshala</h1>
 
                             <div className="content-boxx hotel_rd_more">
-                            <div className="content-boxx hotel_rd_more">Alivaa Hotel provides a perfect retreat in the peaceful environment of McLeodganj, which rests at the base of the Dhauladhar Mountains. From its location that showcases both Dalai Lama House and Himalayan landscapes, Alivaa presents a contemporary atmosphere that brings comfort to its guests by offering the best stay in McLeodganj, Dharamshala. Business guests and leisure visitors find their unforgettable experience at the hotel through the combination of cosy accommodations, premium amenities and exquisite service. 
+                                <div className="content-boxx hotel_rd_more">Alivaa Hotel provides a perfect retreat in the peaceful environment of McLeodganj, which rests at the base of the Dhauladhar Mountains. From its location that showcases both Dalai Lama House and Himalayan landscapes, Alivaa presents a contemporary atmosphere that brings comfort to its guests by offering the best stay in McLeodganj, Dharamshala. Business guests and leisure visitors find their unforgettable experience at the hotel through the combination of cosy accommodations, premium amenities and exquisite service.
 
-                                {/* <p style={{textAlign: "left"}}></p>  */}
+                                    {/* <p style={{textAlign: "left"}}></p>  */}
 
-                                {isExpanded && (<McHotelExtended  />)}
+                                    {isExpanded && (<McHotelExtended />)}
 
-                        
 
-                                <motion.button 
 
-                                className="read-more-btnn rd_more text-blue-600 underline ml-2"
+                                    <motion.button
 
-                                onClick={() => setIsExpanded(!isExpanded)}
+                                        className="read-more-btnn rd_more text-blue-600 underline ml-2"
 
-                                initial={{ opacity: 0, y: -100 }}
+                                        onClick={() => setIsExpanded(!isExpanded)}
 
-                        animate={{ opacity: 1, x: 0 ,y: 0}}
+                                        initial={{ opacity: 0, y: -100 }}
 
-                        transition={{ duration: 0.6, delay: 0.6 }}
+                                        animate={{ opacity: 1, x: 0, y: 0 }}
 
-                                >
+                                        transition={{ duration: 0.6, delay: 0.6 }}
 
-                                {isExpanded ? "Read less" : "Read more"}
+                                    >
 
-                                </motion.button>  </div></div>
+                                        {isExpanded ? "Read less" : "Read more"}
 
-                                
+                                    </motion.button>  </div></div>
 
-                        
+
+
+
 
                         </div>
 
-                        
-</div>
-
-                    
-
-
-   <Roomshitesmc/>
- <section className="your-break pt-0 exp1">
-   {/* <ExperienceSlider />       */}
-   </section>
-                    {/* <HotelTab/> */}
-
-
-      <section className="your-break mtn12 sec-padding mt-5">
-            <motion.section className="our-offers about-us alivaa-new-offers-see d-none" 
-
-                    initial={{ opacity: 0, y: -150 }}
-
-                    animate={{ opacity: 1, x: 0 ,y: -100} }
-
-                    transition={{ duration: 0.6, delay: 0.6 }}>
-
-                <div className="container">
-
-                <h4 className="global-heading-gurgaon inner-hd text-center" style={{color:"#4a4a4a"}}>Special Offers</h4>
-
-                {/* <p className="content-boxx">At Alivaa Hotels and Resorts on Sohna Road, Gurgaon near Medanta Hospital take advantage of special discounts. Savour opulent accommodations with exclusive savings, free breakfast, and extended check-out times. Discover our top-notch amenities and enjoy unmatched luxury and comfort. Make your reservation now for a memorable getaway!</p> */}
-
-                <p className="content-boxx text-center">
-                At Alivaa <strong><b>Hotels and Resorts on Sohna Road, Gurgaon</b></strong> near <a href="/hotel-near-medanta-hospital-gurgaon">Medanta Hospital</a> take advantage of special discounts.
-                Savour opulent accommodations with exclusive savings, free breakfast, and extended check-out times. Discover our top-notch amenities and enjoy unmatched luxury and comfort. Make your reservation now for a
-                memorable getaway!
-                </p>
-
-                
-
-                <div className="tab-content" id="myTabContent"
-
-                    initial={{ opacity: 0, y: -150 }}
-
-                    animate={{ opacity: 1, x: 0 ,y: 0}}
-
-                    transition={{ duration: 0.6, delay: 0.6 }}>
-
-
-
-                <div className="tab-pane fade show active" id="all" role="tabpanel">
-
-                <Swiper
-
-                                modules={[Navigation]}
-
-                                navigation
-
-                                loop={true}
-
-                                spaceBetween={10}
-
-                                slidesPerView={1}
-
-                                breakpoints={{
-
-                                600: { slidesPerView: 2 },
-
-                                900: { slidesPerView: 3 },
-
-                                1200: { slidesPerView: 3 },
-
-                                }}>
-
-                            <div className="swiper-wrapper">
-
-                                <SwiperSlide>
-
-                                    <img  src="/images/our-offers/alivaa-new-offer-imgg-2.webp" className="img-fluid w-100 w-100" alt="Alivaa Images" />
-
-                             
-
-                                    <div className="text-center">
-
-                                        <div className="offers-text-home">
-
-                                            <h6 className="offer-name">Executive Package </h6>
-
-                                            <p className="offer-description">
-                                            Up to 50% Off on Best Available Rate
-                                            </p>
-
-                                        </div>
-
-                                        <Link href="/gurgaon-hotel-offers#executive-offer" className="btn btn-primary voffset-2 cls-intro-offer">View Offer</Link>
-
-                                    </div>
-
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-
-                                    <img src="/images/offer-img-2.webp" className="img-fluid w-100 w-100" alt="Alivaa Images" />
-
-                                    <div className="text-center">
-
-                                        <div className="offers-text-home">
-
-                                            <h6 className="offer-name"> Relax with a Staycation</h6>
-
-                                            <p className="offer-description">
-
-                                                Free breakfast, Flexible check-in & check-out
-
-                                            </p>
-
-                                        </div>
-
-                                        <Link href="/gurgaon-hotel-offers#relax-with-staycation" className="btn btn-primary voffset-2 cls-relax-offer">View Offer</Link>
-
-                                    </div>
-
-                                </SwiperSlide>
-
-                                
-
-                                <SwiperSlide>
-
-                                    <img  src="/images/our-offers/offer-img-3.jpg" className="img-fluid w-100 w-100" alt="Alivaa Images"/>
-
-                                    <div className="text-center">
-
-                                        <div className="offers-text-home">
-
-                                            <h6 className="offer-name"> Day Rooms</h6>
-
-                                            <p className="offer-description">
-
-                                            Starting at INR 2024
-
-                                            </p>
-
-                                        </div>
-
-
-
-                                        <Link href="/gurugram-hotel-offers" className="btn btn-primary voffset-2 cls-relax-offer">View Offer</Link>
-
-                                    </div>
-
-                                </SwiperSlide>
-
-                            
-
-
-
-                            </div>
-
-                        </Swiper>
-
-                
 
                     </div>
 
-                </div>
 
-                </div>
 
-            </motion.section>
 
-            <motion.section className="rooms-info-block gurgaon-hotel-facilities" 
+                    <Roomshitesmc />
+                    <section className="your-break pt-0 exp1">
+                        {/* <ExperienceSlider />       */}
+                    </section>
+                    {/* <HotelTab/> */}
 
-                initial={{ opacity: 0, x: -50 }}
 
-                whileInView={{ opacity: 1, y: -150, x: 0 }}
+                    <section className="your-break mtn12 sec-padding mt-5">
+                        <motion.section className="our-offers about-us alivaa-new-offers-see"
 
-                transition={{ duration: 0.6,  delay:0.6 }}>
+                            initial={{ opacity: 0, y: -150 }}
 
-                    <div className="container mb-0">
+                            animate={{ opacity: 1, x: 0, y: -100 }}
 
-                        <div className="col-lg-12 no-pad">
+                            transition={{ duration: 0.6, delay: 0.6 }}>
 
-                            <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
+                            <div className="container">
 
-                                <h4 className="global-heading-gurgaon inner-hd text-center" style={{color:"#4a4a4a"}}>Facilities</h4>
+                                <h4 className="global-heading-gurgaon inner-hd text-center" style={{ color: "#4a4a4a" }}>Special Offers</h4>
+
+                                <div className="tab-content" id="myTabContent"
+
+                                    initial={{ opacity: 0, y: -150 }}
+
+                                    animate={{ opacity: 1, x: 0, y: 0 }}
+
+                                    transition={{ duration: 0.6, delay: 0.6 }}>
+
+
+
+                                    <div className="tab-pane fade show active overview-alivaa-offer-slider" id="all" role="tabpanel">
+
+                                        <Swiper
+
+                                            modules={[Navigation]}
+
+                                            navigation
+
+                                            loop={true}
+
+                                            spaceBetween={10}
+
+                                            slidesPerView={1}
+
+                                            breakpoints={{
+
+                                                600: { slidesPerView: 2 },
+
+                                                900: { slidesPerView: 3 },
+
+                                                1200: { slidesPerView: 3 },
+
+                                            }}>
+
+                                            <div className="swiper-wrapper">
+
+                                                <SwiperSlide>
+
+                                                    <img src="/offers/limited-time-offer-alivaa-mc.png" className="img-fluid w-100 w-100" alt="Alivaa Images" />
+
+
+
+                                                    <div className="text-center">
+
+                                                        <div className="offers-text-home">
+
+                                                            <h6 className="offer-name">Limited Time Offer</h6>
+
+                                                            <p className="offer-description">
+                                                                Up to 50% Off on Best Available Rate
+                                                            </p>
+
+                                                        </div>
+
+                                                        <Link href="/mcleodganj-hotel-offers" className="btn btn-primary voffset-2 cls-intro-offer">View Offer</Link>
+
+                                                    </div>
+
+                                                </SwiperSlide>
+
+                                            </div>
+
+                                        </Swiper>
+
+
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
-                            <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
+                        </motion.section>
 
-                                <p className="content-boxx text-center mb-5">
-                                Alivaa Hotel presents a well-selected assortment of friendly amenities along with our supportive services to develop an exceptional guest experience. Modern amenities and wellness facilities have been thoughtfully integrated throughout the establishment to provide you with a restful and satisfying stay. Each amenity at our hotel is designed specifically to deliver unmatched comfort and convenience for all guests spending time in Dharamshala.
+                        <motion.section className="rooms-info-block gurgaon-hotel-facilities"
+
+                            initial={{ opacity: 0, x: -50 }}
+
+                            whileInView={{ opacity: 1, y: -150, x: 0 }}
+
+                            transition={{ duration: 0.6, delay: 0.6 }}>
+
+                            <div className="container mb-0">
+
+                                <div className="col-lg-12 no-pad">
+
+                                    <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{ visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }}>
+
+                                        <h4 className="global-heading-gurgaon inner-hd text-center" style={{ color: "#4a4a4a" }}>Facilities</h4>
+
+                                    </div>
+
+                                    <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{ visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }}>
+
+                                        <p className="content-boxx text-center mb-5">
+                                            Alivaa Hotel presents a well-selected assortment of friendly amenities along with our supportive services to develop an exceptional guest experience. Modern amenities and wellness facilities have been thoughtfully integrated throughout the establishment to provide you with a restful and satisfying stay. Each amenity at our hotel is designed specifically to deliver unmatched comfort and convenience for all guests spending time in Dharamshala.
 
 
-                                </p>
+                                        </p>
 
-                            </div>
+                                    </div>
 
-                        </div>
-
-                        
-
-                <div className="tab-content" >
+                                </div>
 
 
 
-                <div className="tab-pane fade show active">
+                                <div className="tab-content" >
 
-                        <div className="offers-slider">
 
-                            <Swiper
 
-                                modules={[Navigation]}
+                                    <div className="tab-pane fade show active">
 
-                                navigation
+                                        <div className="offers-slider">
 
-                                loop={true}
+                                            <Swiper
 
-                                spaceBetween={10}
+                                                modules={[Navigation]}
 
-                                slidesPerView={1}
+                                                navigation
 
-                                breakpoints={{
+                                                loop={true}
 
-                                600: { slidesPerView: 2 },
+                                                spaceBetween={10}
 
-                                900: { slidesPerView: 3 },
+                                                slidesPerView={1}
 
-                                1200: { slidesPerView: 3 },
+                                                breakpoints={{
 
-                                }}>
+                                                    600: { slidesPerView: 2 },
 
-                               
+                                                    900: { slidesPerView: 3 },
 
-                                <SwiperSlide>
+                                                    1200: { slidesPerView: 3 },
 
-<img className="w-100 primary-radius" src="/images/mcleodganj/facilities/swiming.png"/>
-                                {/* <video autoPlay loop muted playsInline className="w-100 primary-radius">
+                                                }}>
+
+
+
+                                                <SwiperSlide>
+
+                                                    <img className="w-100 primary-radius" src="/images/mcleodganj/facilities/swiming.png" />
+                                                    {/* <video autoPlay loop muted playsInline className="w-100 primary-radius">
               <source src="/images/facilities/PoolReel.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video> */}
 
-                                    <div className="overlay"></div>
+                                                    <div className="overlay"></div>
 
-                                        <div className="icon-box icon-box-body">
+                                                    <div className="icon-box icon-box-body">
 
-                                            <div className="icon-box-button">
+                                                        <div className="icon-box-button">
 
-                                                <div className="btn-wrapper icon-position-after">
+                                                            <div className="btn-wrapper icon-position-after">
 
-                                                    <a href="mcleodganj-facilities#steam" className="icon-box-link view1-info">Swimming Pool (Rooftop)</a>
+                                                                <a href="mcleodganj-facilities#steam" className="icon-box-link view1-info">Swimming Pool (Rooftop)</a>
 
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-                                {/* <video autoPlay loop muted playsInline className="w-100 primary-radius">
-              <source src="/images/facilities/Cafereel.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video> */}
-            <img className="w-100 primary-radius" src="/images/mcleodganj/facilities/steam.png"/>
-
-                                    <div className="overlay"></div>
-
-                                        <div className="icon-box icon-box-body">
-
-                                            <div className="icon-box-button">
-
-                                                <div className="btn-wrapper icon-position-after">
-
-                                                    <a href="/mcleodganj-facilities" className="icon-box-link view1-info">Steam & Sauna</a>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                {/* <video autoPlay loop muted playsInline className="w-100 primary-radius">
-              <source src="/images/facilities/Cafereel.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video> */}
-            <img className="w-100 primary-radius" src="/images/mcleodganj/facilities/dining.png"/>
-
-                                    <div className="overlay"></div>
-
-                                        <div className="icon-box icon-box-body">
-
-                                            <div className="icon-box-button">
-
-                                                <div className="btn-wrapper icon-position-after">
-
-                                                    <a href="/mcleodganj-facilities" className="icon-box-link view1-info">Dining</a>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                </SwiperSlide>
-
-                            
-
-                            </Swiper>
-
-                           
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                        
-
-                    </div>
-
-                </motion.section>
-
-
-
-<motion.section className="gallery-section gurgaon-hotel"
-  initial={{ opacity: 0, y: -250 }}
-  animate={{ opacity: 1, x: 0, y: -150 }}
-  transition={{ duration: 0.6, delay: 0.6 }}>
-  
-  <article className="container-fluid no-padd">
-
-    <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
-
-      <h4 className="global-heading-gurgaon inner-hd text-center">Gallery</h4>
-
-      <p>Step into the heart of our hotel, where modern elegance meets the tranquil charm of the mountains. From light-filled rooms with sweeping views to inviting nooks made for unwinding, every corner is thoughtfully crafted to blend comfort with style.
-          </p>
-    </div>
-
-    <div className="col-lg-12 no-padd wow fadeInUp animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
-
-      <div className="owl-carousel owl-theme gal-slider owl-loaded owl-drag">
-        <div className="owl-stage-outer">
-          <div className="owl-stage" style={{ animation: "scrollGallery 20s linear infinite", display: "flex" }}>
-
-            <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/1.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/2.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/3.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/4.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/5.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/6.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/7.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/8.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/15.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/10.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/11.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/12.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/13.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/14.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            {/* <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/15.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/mcleodganj/gallery/5.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div> */}
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </article>
-
-</motion.section>
-
-
-
-
-                <motion.section className="gallery-section mb-tst gurgaon-hotel-testimonials d-none" 
-
-                    initial={{ opacity: 0, y: -350 }}
-
-                    animate={{ opacity: 1, x: 0 ,y: -200}}
-
-                    transition={{ duration: 0.6, delay: 0.6 }}>
-
-                    <article className="container">
-
-                        <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
-
-                            <h4 className="global-heading-gurgaon inner-hd text-center" style={{color:"#4a4a4a"}}>Testimonials</h4>
-
-                        </div>
-
-
-
-                        <div className="col-lg-12 no-padd gal-slider1">
-
-                        <Swiper
-
-                                modules={[Navigation]}
-
-                                navigation
-
-                                loop={true}
-
-                                spaceBetween={10}
-
-                                slidesPerView={1}
-
-                                breakpoints={{
-
-                                600: { slidesPerView: 2 },
-
-                                900: { slidesPerView: 3 },
-
-                                1200: { slidesPerView: 3 },
-
-                                }}
-
-                            >
-
-                                
-
-                          
-
-                                            <SwiperSlide>
-
-                                                <div className="test-item">
-
-                                                        <span>
-
-                                                            <i className="fa fa-star" aria-hidden="true" />
-
-                                                            <i className="fa fa-star" aria-hidden="true" />
-
-                                                            <i className="fa fa-star" aria-hidden="true" />
-
-                                                            <i className="fa fa-star" aria-hidden="true" />
-
-                                                            <i className="fa fa-star" aria-hidden="true" />
-
-                                                        </span>
-
-                                                        <p>
-
-                                                        My overall experience while staying at Alivaa was amazing. Hotel staff
-
-                                                        were very helpful and humble. Rooms are spacious with a balcony with a
-
-                                                        nice view. Food was delicious too.
-
-                                                        </p>
-
-                                                        <div className="testimonials_inner_profile">
-
-                                                      
-                                                                <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
-
-                                                         
+                                                            </div>
 
                                                         </div>
 
                                                     </div>
 
-                                            </SwiperSlide>
+                                                </SwiperSlide>
 
-                                            <SwiperSlide>
+                                                <SwiperSlide>
+                                                    {/* <video autoPlay loop muted playsInline className="w-100 primary-radius">
+              <source src="/images/facilities/Cafereel.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> */}
+                                                    <img className="w-100 primary-radius" src="/images/mcleodganj/facilities/steam.png" />
 
-                                                <div className="test-item">
+                                                    <div className="overlay"></div>
 
-                                                    <span>
+                                                    <div className="icon-box icon-box-body">
 
-                                                        {" "}
+                                                        <div className="icon-box-button">
 
-                                                        <i className="fa fa-star" aria-hidden="true" />
+                                                            <div className="btn-wrapper icon-position-after">
 
-                                                        <i className="fa fa-star" aria-hidden="true" />
+                                                                <a href="/mcleodganj-facilities" className="icon-box-link view1-info">Steam & Sauna</a>
 
-                                                        <i className="fa fa-star" aria-hidden="true" />
+                                                            </div>
 
-                                                        <i className="fa fa-star" aria-hidden="true" />{" "}
-
-                                                    </span>
-
-                                                    <p>Site and location is good. GMP maintained. Breakfast good.</p>
-
-                                                    <div className="testimonials_inner_profile">
-
-                                                       
-
-                                                        <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
-
-                                                        
+                                                        </div>
 
                                                     </div>
 
-                                                </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    {/* <video autoPlay loop muted playsInline className="w-100 primary-radius">
+              <source src="/images/facilities/Cafereel.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> */}
+                                                    <img className="w-100 primary-radius" src="/images/mcleodganj/facilities/dining.png" />
+
+                                                    <div className="overlay"></div>
+
+                                                    <div className="icon-box icon-box-body">
+
+                                                        <div className="icon-box-button">
+
+                                                            <div className="btn-wrapper icon-position-after">
+
+                                                                <a href="/mcleodganj-facilities" className="icon-box-link view1-info">Dining</a>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
 
                                                 </SwiperSlide>
 
-                                            <SwiperSlide>
 
-                                                <div className="test-item">
+
+                                            </Swiper>
+
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </motion.section>
+
+
+
+                        <motion.section className="gallery-section gurgaon-hotel"
+                            initial={{ opacity: 0, y: -250 }}
+                            animate={{ opacity: 1, x: 0, y: -150 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}>
+
+                            <article className="container-fluid no-padd">
+
+                                <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{ visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }}>
+
+                                    <h4 className="global-heading-gurgaon inner-hd text-center">Gallery</h4>
+
+                                    <p>Step into the heart of our hotel, where modern elegance meets the tranquil charm of the mountains. From light-filled rooms with sweeping views to inviting nooks made for unwinding, every corner is thoughtfully crafted to blend comfort with style.
+                                    </p>
+                                </div>
+
+                                <div className="col-lg-12 no-padd wow fadeInUp animated" data-wow-duration="4s" style={{ visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }}>
+
+                                    <div className="owl-carousel owl-theme gal-slider owl-loaded owl-drag">
+                                        <div className="owl-stage-outer">
+                                            <div className="owl-stage" style={{ animation: "scrollGallery 20s linear infinite", display: "flex" }}>
+
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/1.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/2.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/3.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/4.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/5.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/6.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/7.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/8.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/15.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/10.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/11.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/12.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/13.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="images/mcleodganj/gallery/14.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </motion.section>
+
+                        <motion.section className="gallery-section mb-tst gurgaon-hotel-testimonials d-none"
+
+                            initial={{ opacity: 0, y: -350 }}
+
+                            animate={{ opacity: 1, x: 0, y: -200 }}
+
+                            transition={{ duration: 0.6, delay: 0.6 }}>
+
+                            <article className="container">
+
+                                <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{ visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }}>
+
+                                    <h4 className="global-heading-gurgaon inner-hd text-center" style={{ color: "#4a4a4a" }}>Testimonials</h4>
+
+                                </div>
+
+
+
+                                <div className="col-lg-12 no-padd gal-slider1">
+
+                                    <Swiper
+
+                                        modules={[Navigation]}
+
+                                        navigation
+
+                                        loop={true}
+
+                                        spaceBetween={10}
+
+                                        slidesPerView={1}
+
+                                        breakpoints={{
+
+                                            600: { slidesPerView: 2 },
+
+                                            900: { slidesPerView: 3 },
+
+                                            1200: { slidesPerView: 3 },
+
+                                        }}
+
+                                    >
+
+
+
+
+
+                                        <SwiperSlide>
+
+                                            <div className="test-item">
+
+                                                <span>
+
+                                                    <i className="fa fa-star" aria-hidden="true" />
+
+                                                    <i className="fa fa-star" aria-hidden="true" />
+
+                                                    <i className="fa fa-star" aria-hidden="true" />
+
+                                                    <i className="fa fa-star" aria-hidden="true" />
+
+                                                    <i className="fa fa-star" aria-hidden="true" />
+
+                                                </span>
+
+                                                <p>
+
+                                                    My overall experience while staying at Alivaa was amazing. Hotel staff
+
+                                                    were very helpful and humble. Rooms are spacious with a balcony with a
+
+                                                    nice view. Food was delicious too.
+
+                                                </p>
+
+                                                <div className="testimonials_inner_profile">
+
+
+                                                    <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
+
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </SwiperSlide>
+
+                                        <SwiperSlide>
+
+                                            <div className="test-item">
+
+                                                <span>
+
+                                                    {" "}
+
+                                                    <i className="fa fa-star" aria-hidden="true" />
+
+                                                    <i className="fa fa-star" aria-hidden="true" />
+
+                                                    <i className="fa fa-star" aria-hidden="true" />
+
+                                                    <i className="fa fa-star" aria-hidden="true" />{" "}
+
+                                                </span>
+
+                                                <p>Site and location is good. GMP maintained. Breakfast good.</p>
+
+                                                <div className="testimonials_inner_profile">
+
+
+
+                                                    <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
+
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </SwiperSlide>
+
+                                        <SwiperSlide>
+
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -889,21 +811,21 @@ export default function mcleodganj() {
 
                                                 <div className="testimonials_inner_profile">
 
-                                                   
+
 
                                                     <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
 
-                                                  
+
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -933,21 +855,21 @@ export default function mcleodganj() {
 
                                                 <div className="testimonials_inner_profile">
 
-                                                
+
 
                                                     <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
 
-                                                  
+
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -971,21 +893,21 @@ export default function mcleodganj() {
 
                                                 <div className="testimonials_inner_profile">
 
-                                                
+
 
                                                     <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
 
-                                               
+
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1019,25 +941,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.google.com/maps/contrib/103320555132990483335/place/ChIJxfD7FZwiDTkRP3SrCV-mTAE/@21.9139975,70.0305908,5z/data=!4m6!1m5!8m4!1e1!2s103320555132990483335!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                                                        href="https://www.google.com/maps/contrib/103320555132990483335/place/ChIJxfD7FZwiDTkRP3SrCV-mTAE/@21.9139975,70.0305908,5z/data=!4m6!1m5!8m4!1e1!2s103320555132990483335!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1069,25 +991,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.google.com/maps/contrib/103320555132990483335/place/ChIJxfD7FZwiDTkRP3SrCV-mTAE/@21.9139975,70.0305908,5z/data=!4m6!1m5!8m4!1e1!2s103320555132990483335!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                                                        href="https://www.google.com/maps/contrib/103320555132990483335/place/ChIJxfD7FZwiDTkRP3SrCV-mTAE/@21.9139975,70.0305908,5z/data=!4m6!1m5!8m4!1e1!2s103320555132990483335!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1115,25 +1037,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.google.com/maps/contrib/116578902999132879074/reviews/@28.9073091,77.5081863,8z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D "
+                                                        href="https://www.google.com/maps/contrib/116578902999132879074/reviews/@28.9073091,77.5081863,8z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D "
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1163,25 +1085,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.google.com/maps/contrib/103167828143483917246/reviews/@23.7233364,70.8650363,6z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                                                        href="https://www.google.com/maps/contrib/103167828143483917246/reviews/@23.7233364,70.8650363,6z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1213,25 +1135,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.google.com/maps/contrib/103288800945015468319/reviews/@28.4190371,77.0384289,16z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                                                        href="https://www.google.com/maps/contrib/103288800945015468319/reviews/@28.4190371,77.0384289,16z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1263,25 +1185,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.google.com/maps/contrib/104916681055971274531/reviews/@28.4191128,77.0383927,16z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D "
+                                                        href="https://www.google.com/maps/contrib/104916681055971274531/reviews/@28.4191128,77.0383927,16z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-GB&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D "
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1313,25 +1235,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r963917760-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
+                                                        href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r963917760-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1363,25 +1285,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r964878964-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
+                                                        href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r964878964-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1413,25 +1335,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r971100556-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
+                                                        href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r971100556-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1463,25 +1385,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r971834008-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
+                                                        href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r971834008-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1515,25 +1437,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r959121589-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
+                                                        href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r959121589-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1565,25 +1487,25 @@ export default function mcleodganj() {
 
                                                     <a
 
-                                                    href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r971036337-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
+                                                        href="https://www.tripadvisor.com/ShowUserReviews-g297615-d27714443-r971036337-Alivaa_Hotel_Gurugram_Sohna_Road_City_Center-Gurugram_Gurgaon_Gurgaon_District_.html"
 
-                                                    target="_blank"
+                                                        target="_blank"
 
                                                     >
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1615,19 +1537,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1659,19 +1581,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1705,19 +1627,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1751,19 +1673,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1797,19 +1719,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1845,19 +1767,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/Tripadvisor_Logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1889,19 +1811,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1935,19 +1857,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -1977,19 +1899,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -2017,19 +1939,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -2061,19 +1983,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -2107,19 +2029,19 @@ export default function mcleodganj() {
 
                                                     <a href="#" target="_blank">
 
-                                                    <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/google_logo.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -2149,19 +2071,19 @@ export default function mcleodganj() {
 
                                                     <a href="/gurgaon-hotel-contact#cont-form" target="_blank">
 
-                                                    <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -2183,19 +2105,19 @@ export default function mcleodganj() {
 
                                                     <a href="/gurgaon-hotel-contact#cont-form" target="_blank">
 
-                                                    <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -2223,19 +2145,19 @@ export default function mcleodganj() {
 
                                                     <a href="/gurgaon-hotel-contact#cont-form" target="_blank">
 
-                                                    <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -2267,19 +2189,19 @@ export default function mcleodganj() {
 
                                                     <a href="/gurgaon-hotel-contact#cont-form" target="_blank">
 
-                                                    <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
+                                        </SwiperSlide>
 
-                                            <SwiperSlide>
+                                        <SwiperSlide>
 
-                                                <div className="test-item">
+                                            <div className="test-item">
 
                                                 <span>
 
@@ -2305,35 +2227,35 @@ export default function mcleodganj() {
 
                                                     <a href="/gurgaon-hotel-contact#cont-form" target="_blank">
 
-                                                    <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
+                                                        <img src="images/favicon.png" alt="Tripadvisor_Logo.png" />
 
                                                     </a>
 
                                                 </div>
 
-                                                </div>
+                                            </div>
 
-                                                </SwiperSlide>
-
-                                           
-
-                             </Swiper>
-
-                        </div>
-
-                    </article>
-
-                </motion.section>
-
-                </section>
-
-            </div>
+                                        </SwiperSlide>
 
 
-        </section>
 
-      </>
+                                    </Swiper>
+
+                                </div>
+
+                            </article>
+
+                        </motion.section>
+
+                    </section>
+
+                </div>
+
+
+            </section>
+
+        </>
 
     );
 
-  }
+}

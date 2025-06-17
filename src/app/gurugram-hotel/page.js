@@ -20,6 +20,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import HeaderHoften from "../components/HeaderHoften";
+import Link from "next/link";
 
 import GurugramHotelExtened from "../components/GurugramHotelExtened";
 
@@ -220,6 +221,92 @@ export default function GurugramHotelPage() {
         <div className="container">
     
           {/* <HotelTab/> */}
+
+          <motion.section className="our-offers about-us alivaa-new-offers-see"
+
+                            initial={{ opacity: 0, y: -150 }}
+
+                            animate={{ opacity: 1, x: 0, y: -100 }}
+
+                            transition={{ duration: 0.6, delay: 0.6 }}>
+
+                            <div className="container">
+
+                                <h4 className="global-heading-gurgaon inner-hd text-center" style={{ color: "#4a4a4a" }}>Special Offers</h4>
+
+                                <div className="tab-content" id="myTabContent"
+
+                                    initial={{ opacity: 0, y: -150 }}
+
+                                    animate={{ opacity: 1, x: 0, y: 0 }}
+
+                                    transition={{ duration: 0.6, delay: 0.6 }}>
+
+
+
+                                    <div className="tab-pane fade show active overview-alivaa-offer-slider" id="all" role="tabpanel">
+
+                                        <Swiper
+
+                                            modules={[Navigation]}
+
+                                            navigation
+
+                                            loop={true}
+
+                                            spaceBetween={10}
+
+                                            slidesPerView={1}
+
+                                            breakpoints={{
+
+                                                600: { slidesPerView: 2 },
+
+                                                900: { slidesPerView: 3 },
+
+                                                1200: { slidesPerView: 3 },
+
+                                            }}>
+
+                                            <div className="swiper-wrapper">
+
+                                                <SwiperSlide>
+
+                                                    <img src="/offers/day-use-offer-hoften-ggn1.jpg" className="img-fluid w-100 w-100" alt="Alivaa Images" />
+
+
+
+                                                    <div className="text-center">
+
+                                                        <div className="offers-text-home">
+
+                                                            <h6 className="offer-name">Day Use Rooms</h6>
+
+                                                            <p className="offer-description">
+                                                                Day Use Room 10 AM to 6 PM
+                                                            </p>
+
+                                                        </div>
+
+                                                        <Link href="/gurugram-hotel-offers" className="btn btn-primary voffset-2 cls-intro-offer">View Offer</Link>
+
+                                                    </div>
+
+                                                </SwiperSlide>
+
+                                            </div>
+
+                                        </Swiper>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </motion.section>
 
           <section className="rooms-info-block pmt-0 gurugram-hotel-meeting">
             <article className="container">
@@ -552,122 +639,122 @@ export default function GurugramHotelPage() {
               </div>
             </article>
           </section>
-<motion.section className="gallery-section gurgaon-hotel"
-  initial={{ opacity: 0, y: -250 }}
-  animate={{ opacity: 1, x: 0, y: -150 }}
-  transition={{ duration: 0.6, delay: 0.6 }}>
-  
-  <article className="container-fluid no-padd">
+          <motion.section className="gallery-section gurgaon-hotel"
+            initial={{ opacity: 0, y: -250 }}
+            animate={{ opacity: 1, x: 0, y: -150 }}
+            transition={{ duration: 0.6, delay: 0.6 }}>
+            
+            <article className="container-fluid no-padd">
 
-    <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
+              <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
 
-      <h4 className="global-heading-gurgaon inner-hd text-center">Gallery</h4>
+                <h4 className="global-heading-gurgaon inner-hd text-center">Gallery</h4>
 
-      <p>Take a whirlwind tour or catch a quick glimpse of what to expect at the most fashionable and, dare we say, the coolest hotel in town.</p>
-    </div>
-
-    <div className="col-lg-12 no-padd wow fadeInUp animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
-
-      <div className="owl-carousel owl-theme gal-slider owl-loaded owl-drag">
-        <div className="owl-stage-outer">
-          <div className="owl-stage" style={{ animation: "scrollGallery 20s linear infinite", display: "flex" }}>
-
-            <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/9.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/10.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
+                <p>Take a whirlwind tour or catch a quick glimpse of what to expect at the most fashionable and, dare we say, the coolest hotel in town.</p>
               </div>
-            </div>
 
-            <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/11.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+              <div className="col-lg-12 no-padd wow fadeInUp animated" data-wow-duration="4s" style={{visibility: "visible", WebkitAnimationDuration: "4s",  MozAnimationDuration: "4s",  animationDuration: "4s"}}>
+
+                <div className="owl-carousel owl-theme gal-slider owl-loaded owl-drag">
+                  <div className="owl-stage-outer">
+                    <div className="owl-stage" style={{ animation: "scrollGallery 20s linear infinite", display: "flex" }}>
+
+                      <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                        <div className="item text-center p-1">
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/9.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/10.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                        <div className="item text-center p-1">
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/11.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/12.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                        <div className="item text-center p-1">
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/17.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/13.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                        <div className="item text-center p-1">
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/19.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/20.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                        <div className="item text-center p-1">
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/1.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/15.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                        <div className="item text-center p-1">
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/3.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/22.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                        <div className="item text-center p-1">
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/5.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/6.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                        <div className="item text-center p-1">
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/9.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                          <div className="inner-img-section">
+                            <img src="images/gallery/Thumb/10.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/12.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
+
               </div>
-            </div>
 
-            <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/17.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/13.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
+            </article>
 
-            <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/19.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/20.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/1.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/15.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/3.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/22.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/5.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/6.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-
-            <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
-              <div className="item text-center p-1">
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/9.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-                <div className="inner-img-section">
-                  <img src="images/gallery/Thumb/10.jpg" style={{ height: "206px", width: "308px" }} alt="Hotels in Gurgaon"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </article>
-
-</motion.section>
+          </motion.section>
           
         </div>
       </div>

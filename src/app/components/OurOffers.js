@@ -42,7 +42,7 @@ const offerData = {
             "link": "/gurugram-hotel-offers"
         }
     ],
-    "alivaa": [
+    "alivaa-gurugram": [
         {
             "image": "/offers/limited-time-offer-alivaa-ggn1.png",
             "title": "Limited Time Offer",
@@ -64,7 +64,7 @@ const offerData = {
             "link": "/mcleodganj-hotel-offers"
         }
     ],
-    "hoften": [
+    "hoften-gurugram": [
         {
             "image": "/offers/day-use-offer-hoften-ggn1.jpg",
             "title": "Day Use Rooms",
@@ -72,7 +72,7 @@ const offerData = {
             "link": "/gurugram-hotel-offers"
         }
     ],
-    "lansdowne": [
+    "alivaa-lansdowne": [
         {
             "image": "/offers/limited-time-offer-alivaa-lns1.png",
             "title": "Limited Time Offer",
@@ -85,10 +85,11 @@ const offerData = {
 const OurOffers = () => {
     const swiperRefs = {
         all: useRef(null),
-        alivaa: useRef(null),
+        'alivaa-gurugram': useRef(null),
         'alivaa-mcleodganj': useRef(null),
-        hoften: useRef(null),
-        lansdowne: useRef(null)
+        'alivaa-lansdowne': useRef(null),
+        'hoften-gurugram': useRef(null)
+        
     };
 
     useEffect(() => {
@@ -139,7 +140,7 @@ const OurOffers = () => {
                                 type="button"
                                 role="tab"
                             >
-                                {category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                                {category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(', ')}
                             </button>
                         </li>
                     ))}

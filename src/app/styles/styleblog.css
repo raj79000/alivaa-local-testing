@@ -149,3 +149,7 @@ padding: 10px;
     color: #002d62;
     text-align: center;
 }
+.blog-list-sidebar-box-fixed {
+    position: sticky;
+    top: 190px;
+}

@@ -96,18 +96,20 @@ export default function BlogCategory({ slug, blogs }) {
               </div>
 
               <div className="col-lg-4">
-                <ContactForm />
-                <div className="blog-list-sidebar">
-                  <ul className="blog-list-sidebar-ul">
-                    {blogs.map((blog) => (
-                      <li key={blog.id} className="blog-list-sidebar-li">
-                        <FontAwesomeIcon icon={faDotCircle} />
-                        <Link href={`/${blog.urlslug}`} className="blog-list-link">
-                          {blog.title || 'Untitled Blog'} {/* Add fallback for title */}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="blog-list-sidebar-box-fixed">
+                  <ContactForm />
+                  <div className="blog-list-sidebar">
+                    <ul className="blog-list-sidebar-ul">
+                      {blogs.map((blog) => (
+                        <li key={blog.id} className="blog-list-sidebar-li">
+                          <FontAwesomeIcon icon={faDotCircle} />
+                          <Link href={`/${blog.urlslug}`} className="blog-list-link">
+                            {blog.title || 'Untitled Blog'} {/* Add fallback for title */}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
