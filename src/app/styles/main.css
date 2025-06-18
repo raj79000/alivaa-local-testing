@@ -3178,7 +3178,7 @@ div#quickbook-widget .MbsSearchWidget .dayUseLable {
 
     width: 100%;
 
-    padding: 40px 0 60px
+    padding: 40px 0 60px;
 
 }
 
@@ -7221,6 +7221,8 @@ section.rooms-info-block.gurgaon-hotel-facilities {
 
         padding: 0 0 40px;
         margin-bottom:-50px;
+            z-index: 99;
+    position: relative;
 
     }
 
@@ -8252,6 +8254,8 @@ div#quickbook-widget .MbsSearchWidget .searchBtn {
     width: 100%;
 
     padding: 0 !important;
+    position: relative;
+    z-index: 99;
 
 }
 
@@ -10950,8 +10954,11 @@ transform: translate(0, 0px) !important;
     margin-right: auto!important;
         display: ruby-text;
 }
+@media screen and (max-width:1600px) and (min-width:768px) {
 .overview-alivaa-offer-slider .swiper-wrapper {
     justify-content: center;
+} 
+    
 }
 @media screen and (max-width:767px){
     .coming-hero-title {
@@ -10959,4 +10966,8 @@ transform: translate(0, 0px) !important;
     font-size: 1.3rem !important;
     display: block;
 }
+.tab-content .special-offers .content-boxx{
+    text-align: left!important;
+}
+
 }

@@ -367,7 +367,7 @@ export default function mcleodganj() {
                                                             <h6 className="offer-name">Limited Time Offer</h6>
 
                                                             <p className="offer-description">
-                                                                Up to 50% Off on Best Available Rate
+                                                                Up to 50% Off Exclusive Deals
                                                             </p>
 
                                                         </div>

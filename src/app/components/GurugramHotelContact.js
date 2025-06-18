@@ -186,7 +186,8 @@ const GurugramHotelContact = () => {
 
                 <h6 style={{fontSize: "16px"}}>Phone Number</h6>
 
-                <p style={{fontSize: "14px", color:"#245704"}}><a href="tel:+911244170000">+91 782 7898967</a></p>
+                {/* <p style={{fontSize: "14px", color:"#245704"}}><a href="tel:+911244170000">+91 782 7898967</a></p> */}
+                <p style={{fontSize: "14px", color:"#245704"}}><a href="tel:8130499669">+91 81304 99669</a></p>
 
             </motion.div>
 
@@ -361,7 +362,7 @@ const GurugramHotelContact = () => {
 
             </div>
 
-			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.9186975512657!2d77.06394499999999!3d28.421709999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d23005fc2e163%3A0xc2d2cfa9f94c031b!2sHoften%20Sukh%20Vasa%20Sector%2051%2C%20Gurugram%2C%20India!5e0!3m2!1sen!2sin!4v1747986378364!5m2!1sen!2sin" width="100%" height="320" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.9186975512657!2d77.06394499999999!3d28.421709999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d23005fc2e163%3A0xc2d2cfa9f94c031b!2sHoften%20Sukh%20Vasa%20Sector%2051%2C%20Gurugram%2C%20India!5e0!3m2!1sen!2sin!4v1747986378364!5m2!1sen!2sin" width="100%" height="320"></iframe>
 
 			</div>
 

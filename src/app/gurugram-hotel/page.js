@@ -283,7 +283,7 @@ export default function GurugramHotelPage() {
                                                             <h6 className="offer-name">Day Use Rooms</h6>
 
                                                             <p className="offer-description">
-                                                                Day Use Room 10 AM to 6 PM
+                                                                Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day
                                                             </p>
 
                                                         </div>
