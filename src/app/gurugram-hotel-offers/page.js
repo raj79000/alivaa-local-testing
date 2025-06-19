@@ -49,7 +49,7 @@ export default function GurugramHotelOfferPage() {
         <img alt="Hotels in Gurgaon" className="banner-img pt-0" src="/images/hofton-gallery/hoften-offer-b.jpeg" />
 
         <div className=" social-icon-banner" >
-          <a className="btn btn-social" href="https://www.facebook.com/profile.php?id=61560140841449&amp;mibextid=ZbWKwL" target="_blank">
+          <a className="btn btn-social" href="https://www.facebook.com/profile.php?id=61560140841449&mibextid=ZbWKwL" target="_blank">
             <img src="/images/fb-icon.svg" height="25" width="25" alt="social-icon" className="social-icon" />
           </a>
 
@@ -130,22 +130,21 @@ export default function GurugramHotelOfferPage() {
                                           />
                                       </div>
                                   </div>
-                                  <div className="col-lg-5 offset-lg-1 p-0 text-start" id="executive-offer"
-                                    >
+                                  <div className="col-lg-5 offset-lg-1 p-0 text-start" id="executive-offer">
                                       <h3 className="global-heading mt-0" style={{MarginTop: "20px!important"}}>Day Use Rooms</h3>
+                                      <p className="content-boxx text-left m-0 mb-3" style={{textAlign: "left !important"}}>Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day</p>
                                       <ul style={{textAlign: "justify"}}>
-                                          <li>Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day</li>
+                                         
                                           <li>Room Only (EP) | Free WiFI</li>
-                                          <p>Terms and Conditions:</p>
+                                          <p className="content-boxx text-left m-0 text-start mb-2 " style={{textAlign: "left !important"}}>Terms and Conditions:</p>
                                           <li>8-hour slot to be booked between 10 AM to 6 PM</li>
                                           <li>Check-in is allowed only at or after 10 am, and check-out is before 6 pm on the same day.</li>
                                           <li>Every extra hour utilized post 6 pm will be charged at 50% of the booking value, per hour, subject to room availability.</li>
                                           <li>20% off on Food & Beverage Services.</li>
                                       </ul>
-                                      <Link href="https://bookings.alivaahotels.com/inst/#/home?propertyId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=&JDRN=Y&RoomID=210380,210381,210383,210384,210385&ap=1&gsId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=" className="btn book-now-headerr" style={{ borderColor: '#000' }} id="book-now">
+                                      <Link href="https://bookings.alivaahotels.com/inst/#/home?propertyId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=&JDRN=Y&RoomID=210380,210381,210383,210384,210385&ap=1&gsId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=" className="btn book-now-headerr" id="book-now" style={{backgroundColor: "#245704 !important"}}>
                                           Book Now
-                                      </Link>
-                                  </div>
+                                      </Link>                                  </div>
                               </div>
                             
                           </div>
@@ -156,6 +155,8 @@ export default function GurugramHotelOfferPage() {
           </section>
 
       </motion.section>
+
+      
      
     </>
 

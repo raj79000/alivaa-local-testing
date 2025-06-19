@@ -2,7 +2,7 @@
 export const metadata = {
     metadataBase: new URL('https://www.alivaahotels.com'),
     alternates: {
-      canonical: '/gurgaon-accommodation.php'
+      canonical: '/gurgaon-accommodation'
      },
     title: 'Hotel Rooms, Stay & Accommodation in Gurgaon | Sohna Road | Alivaa Hotels',
     keywords : "",

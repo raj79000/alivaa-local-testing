@@ -77,7 +77,7 @@ const HeaderAlivaa = () => {
                 <li><Link href="/gurgaon-facilities">Facilities</Link></li>
                 <li><Link href="/gurgaon-hotel-offers">Offers</Link></li>
                 <li><Link href="/gurgaon-tourist-attractions">Attractions</Link></li>
-                <li><Link href="/blog">Blogs</Link></li>
+                {/* <li><Link href="/blog">Blogs</Link></li> */}
                 <li><Link href="/gurgaon-gallery">Gallery</Link></li>
                 <li><Link href="/gurgaon-hotel-contact">Contact Us</Link></li>
               </ul>

@@ -368,7 +368,7 @@ export default function GurgaonHotelPage() {
                                                         <div className="offers-text-home">
                                                             <h6 className="offer-name"> Day Use Rooms</h6>
                                                             <p className="offer-description">
-                                                                Day Use Room 10 AM to 6 PM
+                                                                Day Use Room 10 AM to 6 PM, Check-in and Check-out on the same day
                                                             </p>
                                                         </div>
                                                         <Link href="/gurgaon-hotel-offers" className="btn btn-primary voffset-2 cls-relax-offer">View Offer</Link>
