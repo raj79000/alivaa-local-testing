@@ -96,6 +96,23 @@ const OurHotelsSlider = () => {
               </div>
             </SwiperSlide>
 
+            <SwiperSlide>
+              <div className="winter-box shadow-sm">
+                <img src="/jawai-img/jawai-hotel-img.webp" alt="Alivaa Hotel, Jawai" className="w-100 primary-radius mt-0" />
+                <div className="winter-box-content carddd">
+                  <h3 className="winter-box-heading">Alivaa Hotel, Jawai</h3>
+                  <p className="winter-box-para card-texttt">
+                    Drawing its roots from nature and motivated by the “Flame of the Forest”...
+                  </p>
+                  <Link href="/jawai-palash-resort-overview" className="read-more-btnnn">Read more</Link>
+                  <div className="winter-box-btn">
+                    <Link href="/jawai-palash-resort-overview" className="box-btn know-more">Explore More</Link>
+                    <Link href="#" className="box-btn book-noww">Book Now</Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
             {/* Slide 5 */}
             <SwiperSlide>
               <div className="winter-box shadow-sm">

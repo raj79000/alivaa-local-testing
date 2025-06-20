@@ -92,6 +92,7 @@ export default function Navbar() {
                                                 <li><Link href="/gurgaon-hotels">Gurugram </Link></li>
                                                 <li><Link href="/mcleodganj">McLeodganj </Link></li>
                                                 <li><Link href="/lansdowne">Lansdowne </Link></li>
+                                                <li><Link href="/jawai-palash-resort-overview">Jawai </Link></li>
                                             </ul>
                                         </li>
                                             <li className="has-submenu">
