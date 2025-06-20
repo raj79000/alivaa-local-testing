@@ -85,7 +85,7 @@ const LansdowneDining = () => {
   return (
     <>
       {/* room */}
-      <section className="room_cs mt-0">
+      <section className="room_cs mt-0 jawai-new-diining">
         <div className="container-md p-0 shadow-sm">
           <div className="global-heading-sec text-start">
             <div className="row align-items-center" data-aos="fade-in" data-aos-easing="ease-in-sine">
@@ -102,16 +102,18 @@ const LansdowneDining = () => {
               </div>
             </div>
             <div className="row bg-light bg-gradient align-items-center mt-3" data-aos="fade-in" data-aos-easing="ease-in-sine">
-              <div className="col-md-5 space_in d-flex flex-column justify-content-center">
+              <div className="col-md-7 order-lg-2">
+                <Image src="/jawai-img/dine-pvt-dining.png" height={500} width={500} alt="image" className="w-100" />
+              </div>
+
+              <div className="col-md-5 order-lg-1 space_in d-flex flex-column justify-content-center">
                 <h2 className="inner-head mt-5">Private Dining</h2>
                 <p className="mb-2 text-justify" style={{ textAlign: 'justify' }}>
                   For those who seek an intimate and exclusive experience, our private dining area offers the perfect secluded setting. Whether it's a romantic dinner for two, a special celebration with loved ones, or a quiet gathering, this space provides an unparalleled ambiance.  
                 </p>
                 <a className="alivactacolor box-btn  bg_green rounded-0 btn btn-dark mt-3 auto-width-btn" data-bs-toggle="modal" data-bs-target="#banquet-enquiry">Enquire Now</a>
               </div>
-              <div className="col-md-7">
-                <Image src="/jawai-img/dine-pvt-dining.png" height={500} width={500} alt="image" className="w-100" />
-              </div>
+              
             </div>
 
             <div className="row align-items-center py-4" data-aos="fade-in" data-aos-easing="ease-in-sine">

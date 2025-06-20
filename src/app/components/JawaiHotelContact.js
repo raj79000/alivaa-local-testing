@@ -159,12 +159,12 @@ const JawaiHotelContact = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}>
         <div className="col-lg-12 col-xs-12 contactus-form voffset-3">
-          <motion.div className="row mb-5"
+          <motion.div className="row mb-5 jawai-contactt-form"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}>
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInRight animated" data-wow-duration="4s" >
-              <div className="row" >
+              <div className="row " >
                 <h2 style={{ fontSize: "20px", color: "black" }}>Contact us</h2>
                 <form onSubmit={handleSubmit} className="space-y-4 max-w-md contactus-form" noValidate>
                   <div className="col-xs-12 no-pad">

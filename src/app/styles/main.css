@@ -10991,5 +10991,21 @@ transform: translate(0, 0px) !important;
     .jawai-new-attractions {
         margin-bottom: 5rem!important;
     }
+    .jawai-new-diining .global-heading-sec .space_in .inner-head {
+        margin-top: 0!important;
+}
+.jawai-new-diining img{
+    margin-left: 1rem!important;
+}
+.jawai-contactt-form .contactus-form{
+    margin-left: 2rem!important;
+}
+.jawai-contactt-form iframe{
+    margin-left: 1rem!important;
+}
+.jawai-new-facalities img{
+    padding-left: 1rem!important;
+    object-fit: cover!important;
+}
 
     }

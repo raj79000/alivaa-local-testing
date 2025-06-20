@@ -38,15 +38,16 @@ const LansdowneHotelFacilities = () => {
               </div>
             </div>
             <div className="row bg-light bg-gradient align-items-center mt-3" data-aos="fade-in" data-aos-easing="ease-in-sine">
+              <div className="col-md-7 order-lg-2">
+                <Image src="/jawai-img/jawai-games.png" height={500} width={500} alt="image" className="w-100" />
+              </div>
               <div className="col-md-5 space_in d-flex flex-column justify-content-center">
                 <h2 className="inner-head mt-5">Indoor Games</h2>
                 <p className="mb-2 text-justify" style={{ textAlign: 'justify' }}>
                   We at Jawai Palash understand how you would want to spend your relaxation and entertainment time during your stay. Although we mainly strive to link you with the raw beauty of Jawai, we also have an indoor leisure space available for our guests. You can enjoy a game of snooker or pool, which is a great way to spend quiet evenings with family or friends. Board games, fussball, etc, are also available for those who enjoy classic indoor fun and friendly competition. These thoughtful additions offer a way to enjoy your time while staying at the resort. 
                 </p>
                </div>
-              <div className="col-md-7">
-                <Image src="/jawai-img/jawai-games.png" height={500} width={500} alt="image" className="w-100" />
-              </div>
+              
             </div>
 
             
@@ -64,15 +65,16 @@ const LansdowneHotelFacilities = () => {
             </div>
 
             <div className="row bg-light bg-gradient align-items-center mt-3" data-aos="fade-in" data-aos-easing="ease-in-sine">
+              <div className="col-md-7 order-lg-2">
+                <Image src="/jawai-img/fac-swimming-pool-1.png" height={500} width={500} alt="image" className="w-100" />
+              </div>
               <div className="col-md-5 space_in d-flex flex-column justify-content-center">
                 <h2 className="inner-head mt-5">Swimming Pool</h2>
                 <p className="mb-2 text-justify" style={{ textAlign: 'justify' }}>
                  Surrounded by the serenity of Jawai’s natural landscape, our swimming pool invites you to relax, rejuvenate, and soak up the tranquil vibes of the wilderness. Take a refreshing dip, lounge on the sun deck, or simply enjoy the cool breeze as you unwind by the water’s edge. Whether you seek a quiet swim or peaceful moments under the sun, our pool offers the perfect retreat after a day of adventure.
                 </p>
                </div>
-              <div className="col-md-7">
-                <Image src="/jawai-img/fac-swimming-pool-1.png" height={500} width={500} alt="image" className="w-100" />
-              </div>
+              
             </div>
 
           </div>
