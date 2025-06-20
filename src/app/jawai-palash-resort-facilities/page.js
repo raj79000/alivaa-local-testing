@@ -51,7 +51,7 @@ export default function LansdowneFacilitiesPage() {
         <BookNowForm />
       </section>
       <section className="mb-5">
-        <div id="gurgaon-facilities">
+        <div id="gurgaon-facilities" className="jawai-new-facalities">
           <JawaiHotelFacilities />
         </div>
       </section>

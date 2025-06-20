@@ -43,7 +43,7 @@ export default function BookNowForm() {
   label: 'Hoften Hotel, Gurugram',
   slug: 'gurugram-hotel',
   url: 'https://bookings.alivaahotels.com/inst/#/home?propertyId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=&JDRN=Y&RoomID=210380,210381,210383,210384,210385'
-
+  // url: 'https://www.swiftbook.io/inst/#/home?propertyId=682NTIVIPu9ZAKErI0tkxzprLFf6TKSEYla8cUYQ5NDM=&JDRN=Y'
 },
     {
       value: 'mcleodganj',
@@ -56,13 +56,8 @@ export default function BookNowForm() {
       label: 'Alivaa Hotel, Lansdowne',
       slug: 'lansdowne',
       url: 'https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709'
+      // url: 'https://www.swiftbook.io/inst/#/home?propertyId=602NTIJ2geUuL2SfAqTDsRZZ6tXYTwa8NhGQ4ODY='
     },
-    // {
-    //   value: 'jawai',
-    //   label: 'Alivaa Hotel, Jawai',
-    //   slug: 'jawai',
-    //   url: 'https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709'
-    // },
   ];
 
   const checkInDatePickerRef = useRef(null);

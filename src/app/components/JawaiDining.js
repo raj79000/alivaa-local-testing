@@ -10,7 +10,7 @@ const LansdowneDining = () => {
     message: '',
     date: '',
     no_of_guest: '',
-    source_enquiry: 'alivaa-jawai-dine',
+    source_enquiry: 'jawai-dine',
     web_source: 'alivaahotels.com',
   });
   const [responseMsg, setResponseMsg] = useState('');

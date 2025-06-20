@@ -10,7 +10,7 @@ const JawaiHotelContact = () => {
     phone: '',
     subject: '',
     message: '',
-    source_enquiry: 'alivaa-jawai-contact-us',
+    source_enquiry: 'jawai-contact-us',
     web_source: 'alivaahotels.com',
   });
   const [loading, setLoading] = useState(false);
@@ -88,7 +88,7 @@ const JawaiHotelContact = () => {
           phone: '',
           subject: '',
           message: '',
-          source_enquiry: 'alivaa-jawai-contact-us',
+          source_enquiry: 'jawai-contact-us',
           web_source: 'alivaahotels.com',
         });
         setErrors({});
@@ -105,7 +105,8 @@ const JawaiHotelContact = () => {
     }
   };
   return (
-    <motion.section className="our-offers contact-us" style={{ width: "80%", marginBottom: "-30px" }}
+    <>
+        <motion.section className="our-offers contact-us" style={{ width: "80%", marginBottom: "-30px" }}
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: 0.12 }}>
@@ -271,8 +272,11 @@ const JawaiHotelContact = () => {
             </div>
           </motion.div>
         </div>
+
       </motion.div>
     </motion.section>
+    
+    </>
   )
 }
 export default JawaiHotelContact

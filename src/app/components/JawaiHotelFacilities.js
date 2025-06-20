@@ -31,7 +31,7 @@ const LansdowneHotelFacilities = () => {
                 <Image src="/jawai-img/jawai-meeting-space.png" height={400} width={500} alt="image" className="w-100" />
               </div>
               <div className="col-md-5 space_in d-flex flex-column justify-content-center">
-                <h2 className="inner-head mt-5">Meetings </h2>
+                <h2 className="inner-head mt-5">Meeting Space </h2>
                 <p className="mb-2 text-justify" style={{ textAlign: 'justify' }}>
                   Jawai Palash offers a peaceful and inspiring environment for small corporate meetings and intimate discussions. Designed for quiet productivity, our indoor setting comfortably accommodates up to 30 guests for formal or informal gatherings, team huddles, or creative sessions. With personalized service and thoughtful attention to detail, we ensure every detail is taken care of, creating memorable experiences in a stunning setting.
                 </p>
@@ -49,7 +49,32 @@ const LansdowneHotelFacilities = () => {
               </div>
             </div>
 
-           
+            
+
+            <div className="row align-items-center py-3" data-aos="fade-in" data-aos-easing="ease-in-sine">
+              <div className="col-md-7">
+                <Image src="/jawai-img/fac-bonefire-1.jpeg" height={400} width={500} alt="image" className="w-100" />
+              </div>
+              <div className="col-md-5 space_in d-flex flex-column justify-content-center">
+                <h2 className="inner-head mt-5">Bonefire</h2>
+                <p className="mb-2 text-justify" style={{ textAlign: 'justify' }}>
+                  With crisp evenings, clear skies, and the soothing sounds of nature, Jawai Palash offers the perfect setting for a memorable bonfire experience. Gather around the gentle warmth of the fire with family or friends, share stories, listen to the night’s silence, or simply gaze at the starlit sky. Every bonfire evening becomes a cherished moment—where the wild, the warmth, and togetherness come alive under the open sky.
+                </p>
+              </div>
+            </div>
+
+            <div className="row bg-light bg-gradient align-items-center mt-3" data-aos="fade-in" data-aos-easing="ease-in-sine">
+              <div className="col-md-5 space_in d-flex flex-column justify-content-center">
+                <h2 className="inner-head mt-5">Swimming Pool</h2>
+                <p className="mb-2 text-justify" style={{ textAlign: 'justify' }}>
+                 Surrounded by the serenity of Jawai’s natural landscape, our swimming pool invites you to relax, rejuvenate, and soak up the tranquil vibes of the wilderness. Take a refreshing dip, lounge on the sun deck, or simply enjoy the cool breeze as you unwind by the water’s edge. Whether you seek a quiet swim or peaceful moments under the sun, our pool offers the perfect retreat after a day of adventure.
+                </p>
+               </div>
+              <div className="col-md-7">
+                <Image src="/jawai-img/fac-swimming-pool-1.png" height={500} width={500} alt="image" className="w-100" />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

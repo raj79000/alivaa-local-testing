@@ -186,7 +186,7 @@ export default function GurgaonHotelPage() {
                                 </div>
                             </div>
                         </section>
-                        <section className="rooms-info-block gurgaon-hotel-facilities mt-5 pt-0">
+                        <section className="rooms-info-block gurgaon-hotel-facilities mt-5 pt-0 jawai-hotell-facilities">
                             <div className="container mb-0">
                                 <div className="col-lg-12 no-pad">
                                     <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{ visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }}>
@@ -202,9 +202,13 @@ export default function GurgaonHotelPage() {
                                     <div className="tab-pane fade show active">
                                         <div className="offers-slider">
                                             <Swiper
-                                                modules={[Navigation]}
+                                                modules={[Navigation, Autoplay]}
                                                 navigation
                                                 loop={true}
+                                                autoplay={{
+                                                    delay: 2000,
+                                                    disableOnInteraction: false,
+                                                    }} 
                                                 spaceBetween={10}
                                                 slidesPerView={1}
                                                 breakpoints={{
@@ -213,12 +217,12 @@ export default function GurgaonHotelPage() {
                                                     1200: { slidesPerView: 3 },
                                                 }}>
                                                 <SwiperSlide>
-                                                    <Image src="/jawai-img/facilities-1.png" height={400} width={500} className="w-100 primary-radius h-100" alt="Meeting Room" />
+                                                    <Image src="/jawai-img/meeeting-space.png" height={400} width={500} className="w-100 primary-radius h-100" alt="Meeting Room" />
                                                     <div className="overlay"></div>
                                                     <div className="icon-box icon-box-body">
                                                         <div className="icon-box-button">
                                                             <div className="btn-wrapper icon-position">
-                                                                <a href="jawai-palash-resort-facilities" className="icon-box-link view1-info">Meetings </a>
+                                                                <a href="jawai-palash-resort-facilities" className="icon-box-link view1-info">Meeting Space </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -234,6 +238,28 @@ export default function GurgaonHotelPage() {
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
+                                                 <SwiperSlide>
+                                                    <Image src="/jawai-img/fac-bonefire.png" height={400} width={500} className="w-100 primary-radius h-100" alt="Meeting Room" />
+                                                    <div className="overlay"></div>
+                                                    <div className="icon-box icon-box-body">
+                                                        <div className="icon-box-button">
+                                                            <div className="btn-wrapper icon-position">
+                                                                <a href="jawai-palash-resort-facilities" className="icon-box-link view1-info">Bonefire</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                    <Image src="/jawai-img/fac-swimming-pool.png" height={400} width={500} className="w-100 primary-radius h-100" alt="Meeting Room" />
+                                                    <div className="overlay"></div>
+                                                    <div className="icon-box icon-box-body">
+                                                        <div className="icon-box-button">
+                                                            <div className="btn-wrapper icon-position">
+                                                                <a href="jawai-palash-resort-facilities" className="icon-box-link view1-info">Swimming Pool</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
                                                 
                                             </Swiper>
                                         </div>
@@ -241,7 +267,7 @@ export default function GurgaonHotelPage() {
                                 </div>
                             </div>
                         </section>
-                        <motion.section className="gallery-section gurgaon-hotel mt-0 pt-0"
+                        <motion.section className="gallery-section gurgaon-hotel mt-0 pt-0 new-jawai-galley"
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, x: 0, y: 50 }}
                             transition={{ duration: 0.6, delay: 0.6 }}>
@@ -257,113 +283,184 @@ export default function GurgaonHotelPage() {
                                                 <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-facade-1.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-1.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-facade-2.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-2.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-facade-3.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-3.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-facade-4.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-4.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-1.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-5.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-2.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-6.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-3.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-7.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-4.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-8.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-5.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-9.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-6.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-10.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-7.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-11.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-8.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-12.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-9.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-13.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-10.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-14.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-11.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-15.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-room-12.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-16.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-dine-1.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-17.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-dine-2.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-18.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-dine-3.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-19.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-exp-1.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-20.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                {/* <div className="owl-item col-md-4 col-12" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
                                                     <div className="item text-center p-1">
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/g-exp-2.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-21.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                         <div className="inner-img-section">
-                                                            <img src="/jawai-img/22.webp" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                            <img src="/jawai-img/ng-22.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
                                                         </div>
                                                     </div>
-                                                </div> */}
+                                                </div>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-23.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-24.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-25.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-26.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-27.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-28.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-29.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-30.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-31.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-32.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-33.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-34.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="owl-item col-md-4 col-12 cloned" style={{ width: "306.667px", marginRight: "10px" }}>
+                                                    <div className="item text-center p-1">
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-35.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                        <div className="inner-img-section">
+                                                            <img src="/jawai-img/ng-36.jpg" style={{ height: "206px", width: "308px" }} alt="Jawai Palash Resort" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                                                       
                                                
                                             </div>
                                         </div>
@@ -375,6 +472,23 @@ export default function GurgaonHotelPage() {
                     </section>
                 </div>
             </section>
+
+            <style jsx>
+
+    {`
+    @media screen and (max-width: 768px) {
+    .jawai-hotell-facilities .swiper-slide  img{
+    max-height: 450px!important;
+    }
+
+    }
+
+    `}
+
+</style>
+
         </>
     );
 }
+
+

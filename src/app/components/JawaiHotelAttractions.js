@@ -129,7 +129,7 @@ const JawaiHotelAttractions = () => {
                     initial={{ opacity: 0, y: 150, x: 350 }}
                     whileInView={{ opacity: 1, y: 150, x: 230 }}
                     transition={{ duration: 2 }}>
-                    <img src="/jawai-img/attraction-nightgazin.jpeg" alt="jawai attractions" className="custom-img-responsive img-thumbnail  wow fadeInUp animated" data-wow-duration="4s" style={{ width: "60%", height: "130%", marginLeft: "-70px", visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }} />
+                    <img src="/jawai-img/stargazing-new.jpeg" alt="jawai attractions" className="custom-img-responsive img-thumbnail  wow fadeInUp animated" data-wow-duration="4s" style={{ width: "60%", height: "130%", marginLeft: "-70px", visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }} />
                     <motion.div className="room-main-info right-block dlf-golf mb-05 wow fadeInDown animated country-club" data-wow-duration="4s" style={{ width: "50%", height: "80%", visibility: "visible", WebkitAnimationDuration: "6s", MozAnimationDuration: "6s", animationDuration: "6s" }}
                       initial={{ opacity: 0, y: -250, x: -1150 }}
                       whileInView={{ opacity: 1, y: -250, x: -750 }}

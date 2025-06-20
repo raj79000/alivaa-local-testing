@@ -37,7 +37,7 @@ export default function GurgaonAttractionsPage() {
       <section className="booking-form-section">
         <BookNowForm />
       </section>
-      <div id="gurgaon-attraction">
+      <div id="gurgaon-attraction" className="jawai-new-attractions">
         <JawaiHotelAttractions />
       </div>
     </>

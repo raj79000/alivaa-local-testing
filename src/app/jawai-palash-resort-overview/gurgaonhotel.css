@@ -205,3 +205,10 @@ section{ display:block;}
 } */
 
   
+
+@media screen and (max-width: 768px) {
+  .gallery-section.new-jawai-galley{
+        transform: translateY(-66px) !important;
+    }
+  
+}

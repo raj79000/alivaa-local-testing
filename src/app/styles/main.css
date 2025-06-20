@@ -10971,3 +10971,25 @@ transform: translate(0, 0px) !important;
 }
 
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .jawai-hotell-facilities .swiper-slide  img{
+    max-height: 450px!important;
+    }
+    .jawai-new-facalities .space_in{
+        padding: 0rem 2rem 0rem 2rem !important;
+
+    }
+    .jawai-new-attractions .room-main-info.right-block {
+        transform: translate(10px, 49px) !important;
+    }
+    .jawai-new-attractions .gurgaon-attrac{
+        margin-top:0!important;
+    }
+    .jawai-new-attractions {
+        margin-bottom: 5rem!important;
+    }
+
+    }

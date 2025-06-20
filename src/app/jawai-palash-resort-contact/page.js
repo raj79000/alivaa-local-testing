@@ -17,7 +17,7 @@ export default function JawaiHotelContactPage() {
       </section>
       <section className="banner-section">
         <Image height={700} width={1500} alt="Hotels in Gurgaon" className="w-100 banner-img pt-0" src="/jawai-img/jawai-contact-banner.png" />
-        
+
         <div className=" social-icon-banner" >
           <a className="btn btn-social" href="https://www.facebook.com/profile.php?id=61560140841449&amp;mibextid=ZbWKwL" target="_blank">
             <img src="/images/fb-icon.svg" height="25" width="25" alt="social-icon" className="social-icon" />
@@ -33,7 +33,7 @@ export default function JawaiHotelContactPage() {
           <img src="images/down-arrow.png" />
         </span>
       </section>
-    
+
       <section className="booking-form-section">
         <BookNowForm />
       </section>
@@ -54,6 +54,56 @@ export default function JawaiHotelContactPage() {
           </motion.section>
         </div>
       </div>
+
+      <section className="container mt-0 mb-5">
+        <div className="row justify-content-center">
+          <div className="col-md-8 no-pad">
+            <div className="contact-location-distance-data">
+              <h2 className="mt-0">How to Reach Us</h2>
+              <ul className="reachus-data">
+                <li>Maharana Pratap Airport (Udaipur) <b>145 Km</b></li>
+                <li>Jodhpur Airport <b>172 Km</b></li>
+                <li>Jawai Bandh Railway Station <b>13 Km</b></li>
+                <li>Sumerpur Bus Stand <b>23 Km</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style jsx>{`
+        
+.contact-location-distance-data{
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+  .reachus-data {
+    list-style:none;
+}
+.reachus-data {
+    margin: 0;
+    padding: 0;
+}
+   .reachus-data  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px !important;
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px 0;
+}
+       .reachus-data  li b {
+    font-weight: 600;
+}
+    .contact-location-distance-data{
+    padding-bottom: 35px;}
+
+
+        `}
+        </style>
+
     </>
   );
 }

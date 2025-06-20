@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,12 +13,15 @@ const OurHotelsSlider = () => {
         <h2 className="about-us text-center mt-5">Our Hotels</h2>
         <div className="winter-sec htlslder">
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
             navigation={false}
             pagination={{ clickable: true }}
-            breakpoints={{
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}            breakpoints={{
               576: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
               992: { slidesPerView: 3 },
@@ -98,7 +101,7 @@ const OurHotelsSlider = () => {
 
             <SwiperSlide>
               <div className="winter-box shadow-sm">
-                <img src="/jawai-img/jawai-hotel-img.webp" alt="Alivaa Hotel, Jawai" className="w-100 primary-radius mt-0" />
+                <img src="/jawai-img/jawai-hotel-img.jpg" alt="Alivaa Hotel, Jawai" className="w-100 primary-radius mt-0" />
                 <div className="winter-box-content carddd">
                   <h3 className="winter-box-heading">Alivaa Hotel, Jawai</h3>
                   <p className="winter-box-para card-texttt">
@@ -153,7 +156,7 @@ const OurHotelsSlider = () => {
                   <h3 className="winter-box-heading">Alivaa Hotel, Udaipur</h3>
                   <p className="winter-box-para card-texttt">Stay amidst heritage, history, and serene lake views. </p>
                   <div className="winter-box-btn">
-                    <Link href="/" className="box-btn book-noww tooltipp mt-4" title="coming soon">
+                    <Link href="/" className="box-btn book-noww tooltipp mt-1" title="coming soon">
                       Coming soon<span className="tooltiptextt">Coming soon</span>
                     </Link>
                   </div>
