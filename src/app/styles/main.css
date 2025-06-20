@@ -2116,7 +2116,7 @@ section.search-content.new-rj-block{
 }
 .home-hdr-hght{ height:160px;   
     position: relative;
-    z-index: 99999; 
+    z-index: 99999999; 
 }
 
 .banner-img,
@@ -10829,7 +10829,7 @@ transform: translate(0px, -350px) !important;
     margin: 0px 5px;
 }
 .modal{
-    z-index: 999999;
+    z-index: 99999999;
 }
 .tab-pane-for-Lansdowne-overview-facilities .swiper-wrapper{
     justify-content: center;
@@ -11006,6 +11006,9 @@ transform: translate(0, 0px) !important;
 .jawai-new-facalities img{
     padding-left: 1rem!important;
     object-fit: cover!important;
+}
+.search-content.contact-us.new-rj-block.text-center.mt-1.gurgaon-dinning.jaawai-dinging-enquiry-sec{
+    transform: none!important;
 }
 
     }

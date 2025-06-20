@@ -81,7 +81,7 @@ export default function JawaiDiningPage() {
 
       <div className="row">
         <div className="container">
-          <div className="search-content contact-us new-rj-block text-center mt-1 gurgaon-dinning">
+          <div className="search-content contact-us new-rj-block text-center mt-1 gurgaon-dinning jaawai-dinging-enquiry-sec">
             <JawaiDining></JawaiDining>
           </div>
         </div>
