@@ -15,6 +15,7 @@ import { useState } from "react";
 import { FormProvider } from "app/booking-engine-widget/FormContext";
 import BookNowForm from "app/booking-engine-widget/BookNowForm";
 import HeaderLansdowne from "app/components/HeaderLansdowne";
+import LansdowneNewEnquiryPopupBook from "app/components/LansdowneNewEnquiryPopupBook";
 export default function GurgaonHotelOffersPage (){
   const [isVisible, setIsVisible] = useState(false);
     return (
@@ -95,8 +96,8 @@ export default function GurgaonHotelOffersPage (){
                                     <li>Free Guaranteed Early check-in & Late check-out</li>
                                     
                                 </ul>
-                                <Link href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=" className="btn book-now-headerr" style={{ borderColor: '#000' }} id="book-now">
-                                    Book Now
+                                <Link href="#" className="btn book-now-headerr" style={{ borderColor: '#000' }} id="book-now" data-bs-toggle="modal" data-bs-target="#LansEnquiryModal">
+                                    Enquire Now
                                 </Link>
                             </div>
                         </div>
@@ -111,6 +112,7 @@ export default function GurgaonHotelOffersPage (){
     <br></br>
     </div>
             </div>
+            <LansdowneNewEnquiryPopupBook></LansdowneNewEnquiryPopupBook>
         </>
     )
 }

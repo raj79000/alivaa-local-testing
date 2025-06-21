@@ -5,9 +5,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import Link from "next/link";
+import LansdowneNewEnquiryPopupBook from "./LansdowneNewEnquiryPopupBook";
 
 const RoomSuitsLansdowne = () => {
   return (
+    <>
     <section className="your-break about-us sec-padding lansdowne-room-sec-new">
       <div className="container">
         <h2 className="about-us text-center">Check Out Our Best Rooms & Suites</h2>
@@ -60,7 +62,7 @@ const RoomSuitsLansdowne = () => {
                   <p className="winter-box-para card-texttt">{room.description}</p>
                   <div className="winter-box-btn">
                     <Link href="/lansdowne-accommodation" className="box-btn know-more">Explore More</Link>
-                    <Link href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=" className="box-btn book-noww">Book Now</Link>
+                    <Link href="#" className="box-btn book-noww" data-bs-toggle="modal" data-bs-target="#LansEnquiryModal">Enquire Now</Link>
                   </div>
                 </div>
               </div>
@@ -69,6 +71,8 @@ const RoomSuitsLansdowne = () => {
         </Swiper>
       </div>
     </section>
+    <LansdowneNewEnquiryPopupBook />
+    </>
   );
 };
 

@@ -14,9 +14,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
+import LansdowneNewEnquiryPopupBook from "./LansdowneNewEnquiryPopupBook";
 
 const SpecialOffers = () => {
   return (
+    <>
     <motion.section className="new-our-offers our-offers about-us">
       <div className="container">
         <div className="tab-content" id="myTabContent">
@@ -322,15 +324,17 @@ const SpecialOffers = () => {
 
 
                         <Link
-                          href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY="
+                          href="#"
                           className="btn text-white dark-bg rounded-0"
                           style={{
                             borderColor: "#000",
                             backgroundColor: "#002d62",
                           }}
                           id="book-now"
+                          data-bs-toggle="modal"
+                          data-bs-target="#LansEnquiryModal"
                         >
-                          Book Now
+                          Enquire Now
                         </Link>
                       </div>
                 </div>
@@ -343,6 +347,8 @@ const SpecialOffers = () => {
         </div>
       </div>
     </motion.section>
+    <LansdowneNewEnquiryPopupBook></LansdowneNewEnquiryPopupBook>
+    </>
   );
 };
 

@@ -13,6 +13,7 @@ import NavbarAliva from "app/components/NavbarAliva";
 import { useState } from "react";
 import BookNowForm from "app/booking-engine-widget/BookNowForm";
 import HeaderJawai from "app/components/HeaderJawai";
+import JawaiNewEnquiryPopupBook from "app/components/JawaiNewEnquiryPopupBook";
 export default function GurgaonAccommodationPage() {
   const [showMore, setShowMore] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -102,9 +103,9 @@ export default function GurgaonAccommodationPage() {
                   <a
                     href="#"
                     className="rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62" }}
+                    style={{ backgroundColor: "#002d62" }} data-bs-toggle="modal" data-bs-target="#enquiryModall"
                   >
-                    Book Now
+                    Enquire Now
                   </a>
                 </div>
                 
@@ -228,9 +229,9 @@ export default function GurgaonAccommodationPage() {
                   <a
                     href="#"
                     className=" rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62" }}
+                    style={{ backgroundColor: "#002d62" }} data-bs-toggle="modal" data-bs-target="#enquiryModall"
                   >
-                    Book Now
+                    Enquire Now
                   </a>
                 </div>
               </div>
@@ -328,9 +329,9 @@ export default function GurgaonAccommodationPage() {
                   <a
                     href="#"
                     className=" rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62" }}
+                    style={{ backgroundColor: "#002d62" }} data-bs-toggle="modal" data-bs-target="#enquiryModall"
                   >
-                    Book Now
+                    Enquire Now
                   </a>
                 </div>
                 {/* Right Column */}
@@ -346,6 +347,8 @@ export default function GurgaonAccommodationPage() {
         </section>
         
       </div>
+
+      <JawaiNewEnquiryPopupBook />
     </>
   );
 }

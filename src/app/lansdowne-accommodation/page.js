@@ -18,6 +18,7 @@ import { useState } from "react";
 import NavbarAliva from "app/components/NavbarAliva";
 import BookNowForm from "app/booking-engine-widget/BookNowForm";
 import HeaderLansdowne from "app/components/HeaderLansdowne";
+import LansdowneNewEnquiryPopupBook from "app/components/LansdowneNewEnquiryPopupBook";
 
 export default function McleodganjAccommodationPage() {
   const [showMore, setShowMore] = useState(false);
@@ -148,11 +149,11 @@ export default function McleodganjAccommodationPage() {
 
                   {/* Book Now Button */}
                   <a
-                    href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY="
+                    href="#"
                     className="alivactacolor rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62 !important" }}
+                    style={{ backgroundColor: "#002d62 !important" }} data-bs-toggle="modal" data-bs-target="#LansEnquiryModal"
                   >
-                    Book Now
+                    Enquire Now
                   </a>
                 </div>
 
@@ -273,11 +274,11 @@ export default function McleodganjAccommodationPage() {
 
                   {/* Book Now Button */}
                   <a
-                    href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY="
+                    href="#"
                     className="alivactacolor rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62 !important" }}
+                    style={{ backgroundColor: "#002d62 !important" }} data-bs-toggle="modal" data-bs-target="#LansEnquiryModal"
                   >
-                    Book Now
+                    Enquire Now
                   </a>
                 </div>
               </div>
@@ -351,11 +352,11 @@ export default function McleodganjAccommodationPage() {
 
                   {/* Book Now Button */}
                   <a
-                    href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY="
+                    href="#"
                     className="alivactacolor rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62 !important" }}
+                    style={{ backgroundColor: "#002d62 !important" }} data-bs-toggle="modal" data-bs-target="#LansEnquiryModal"
                   >
-                    Book Now
+                    Enquire Now
                   </a>
                 </div>
 
@@ -444,11 +445,11 @@ export default function McleodganjAccommodationPage() {
 
                   {/* Book Now Button */}
                   <a
-                    href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY="
+                    href="#"
                     className="alivactacolor rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62 !important" }}
+                    style={{ backgroundColor: "#002d62 !important" }} data-bs-toggle="modal" data-bs-target="#LansEnquiryModal"
                   >
-                    Book Now
+                    Enquire Now
                   </a>
                 </div>
               </div>
@@ -458,6 +459,7 @@ export default function McleodganjAccommodationPage() {
 
         {/* room */}
       </div>
+      <LansdowneNewEnquiryPopupBook></LansdowneNewEnquiryPopupBook>
     </>
   );
 }

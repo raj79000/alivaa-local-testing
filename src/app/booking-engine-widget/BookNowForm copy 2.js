@@ -39,9 +39,10 @@ const handleEnquirySubmit = async () => {
   }
  
   const payload = {
-    source_enquiry: selectedHotel.value === "jawai" ? "alivaa-jawai" : "alivaa-lansdowne",
+    source_enquiry: "alivaa-jawai",
     name: name,
     phone: mobile,
+    // message: `Enquiry via popup form on ${pathname} (Email: ${email || 'N/A'})`,
     message: ``,
     checkin_date: formatDate(rangeStart),
     checkout_date: formatDate(rangeEnd),
@@ -106,13 +107,13 @@ const handleEnquirySubmit = async () => {
       value: 'lansdowne',
       label: 'Alivaa Hotel, Lansdowne',
       slug: 'lansdowne',
-      url: ''
+      url: 'https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709'
     },
     {
       value: 'jawai',
       label: 'Alivaa Hotel, Jawai',
       slug: 'jawai',
-      url: ''
+      url: 'https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709'
     },
   ];
 
@@ -190,7 +191,7 @@ const handleEnquirySubmit = async () => {
   let bookingUrl = selectedHotel.url;
   const checkIn = formatDate(rangeStart);
   const checkOut = formatDate(rangeEnd);
-  if (selectedHotel.value === 'jawai' || selectedHotel.value === 'lansdowne') {
+  if (selectedHotel.value === 'jawai') {
   setShowPopupForm(true); // show popup instead of opening URL
   return;
 }
@@ -212,6 +213,12 @@ const handleEnquirySubmit = async () => {
   const guestString = `[${guestParams.join(',')}]`;
 
   bookingUrl += `&checkInDate=${checkIn}&checkOutDate=${checkOut}&guest=${encodeURIComponent(guestString)}&roomPropertyID=185914d6-4ebc-48b5-b982-6e81e5eb35b0`;
+} else if (selectedHotel.value === 'lansdowne') {
+  bookingUrl += `&checkIn=${checkIn}&checkOut=${checkOut}&clientWidth=1280&noofrooms=${countroom}`;
+  formRows.forEach((row, index) => {
+    bookingUrl += `&adult${index}=${row.count1}&child${index}=${row.count2}`;
+  });
+  bookingUrl += `&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&RoomID=209630,209631,209632,209633,209709`;
 } else if (selectedHotel.value === 'gurugram2') {
   bookingUrl += `&checkIn=${checkIn}&checkOut=${checkOut}&noofrooms=${countroom}`;
   formRows.forEach((row, index) => {
@@ -248,7 +255,9 @@ const handleEnquirySubmit = async () => {
               <Select
                 className="form-control p-0 border-0"
                 id="hotel-select"
-                
+                // options={hotelOptions}
+                // onChange={handleHotelSelect}
+                // defaultValue={hotelOptions[0]}
                 options={hotelOptions}
                 onChange={handleHotelSelect}
                 value={selectedHotel}
@@ -404,7 +413,7 @@ const handleEnquirySubmit = async () => {
       </div>
       <div className="popup-field">
         <label>Mobile</label>
-        <input type="tel" value={guestInfo.mobile} onChange={(e) => setGuestInfo({ ...guestInfo, mobile: e.target.value })} maxLength={10} required placeholder='Enter Mobile Number' />
+        <input type="tel" value={guestInfo.mobile} onChange={(e) => setGuestInfo({ ...guestInfo, mobile: e.target.value })} maxLength={10} required />
         {guestInfo.mobile === '' && guestInfo.mobile !== undefined && guestInfo.submitted && <span style={{ color: 'red', fontSize: '12px' }}>Please enter your mobile number</span>}
       </div>
       <div className="text-center">

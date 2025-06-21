@@ -1,5 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import JawaiNewEnquiryPopupBook from "./JawaiNewEnquiryPopupBook";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,6 +9,7 @@ import Link from "next/link";
 
 const RoomsSuitsJawai = () => {
   return (
+    <>
     <section className="your-break about-us sec-padding mb-5">
       <div className="container">
         <h2 className="about-us text-center mt-5">Rooms & Suites</h2>
@@ -54,7 +56,7 @@ const RoomsSuitsJawai = () => {
                   <p className="winter-box-para card-texttt">{room.description}</p>
                   <div className="winter-box-btn">
                     <Link href="/jawai-palash-resort-rooms-suites" className="box-btn know-more">Explore More</Link>
-                    <Link href="#" className="box-btn book-noww">Book Now</Link>
+                    <Link href="#" className="box-btn book-noww" data-bs-toggle="modal" data-bs-target="#enquiryModall">Enquire Now</Link>
                   </div>
                 </div>
               </div>
@@ -63,6 +65,8 @@ const RoomsSuitsJawai = () => {
         </Swiper>
       </div>
     </section>
+    <JawaiNewEnquiryPopupBook />
+   </>
   );
 };
 

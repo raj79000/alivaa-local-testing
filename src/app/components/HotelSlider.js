@@ -5,9 +5,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
 import Image from "next/image";
+import JawaiNewEnquiryPopupBook from "./JawaiNewEnquiryPopupBook";
+import LansdowneNewEnquiryPopupBook from "./LansdowneNewEnquiryPopupBook";
 
 const OurHotelsSlider = () => {
   return (
+    <>
     <section className="your-break about-us sec-padding">
       <div className="container">
         <h2 className="about-us text-center mt-5">Our Hotels</h2>
@@ -93,7 +96,8 @@ const OurHotelsSlider = () => {
                   <Link href="/lansdowne" className="read-more-btnnn">Read more</Link>
                   <div className="winter-box-btn">
                     <Link href="/lansdowne" className="box-btn know-more">Explore More</Link>
-                    <Link href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=" className="box-btn book-noww">Book Now</Link>
+                    {/* <Link href="https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709&ap=1&gsId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=" className="box-btn book-noww">Book Now</Link> */}
+                    <Link href="#" className="box-btn book-noww" data-bs-toggle="modal" data-bs-target="#LansEnquiryModal">Enquire Now</Link>
                   </div>
                 </div>
               </div>
@@ -110,7 +114,7 @@ const OurHotelsSlider = () => {
                   <Link href="/jawai-palash-resort-overview" className="read-more-btnnn">Read more</Link>
                   <div className="winter-box-btn">
                     <Link href="/jawai-palash-resort-overview" className="box-btn know-more">Explore More</Link>
-                    <Link href="#" className="box-btn book-noww">Book Now</Link>
+                    <Link href="#" className="box-btn book-noww" data-bs-toggle="modal" data-bs-target="#enquiryModall">Enquire Now</Link>
                   </div>
                 </div>
               </div>
@@ -171,6 +175,11 @@ const OurHotelsSlider = () => {
         </div>
       </div>
     </section>
+
+    <JawaiNewEnquiryPopupBook />
+    <LansdowneNewEnquiryPopupBook />
+
+    </>
   );
 };
 

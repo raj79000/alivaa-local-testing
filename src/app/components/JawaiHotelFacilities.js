@@ -13,7 +13,7 @@ const LansdowneHotelFacilities = () => {
           >
             <div className="container text-center">
               <h1 className="global-heading-gurgaon inner-hd">
-                Facilities in Jawai Palash
+                Facilities in Jawai Palash Resort
               </h1>
               <p className="content-boxx">
                 We offer exceptional facilities in Jawai designed to cater to all your needs, ensuring a comfortable and memorable stay.
