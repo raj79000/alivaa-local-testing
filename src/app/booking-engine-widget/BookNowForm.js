@@ -410,20 +410,21 @@ const handleEnquirySubmit = async () => {
       <div className="text-center">
         <button className="jawai-booking-submit-btn" 
           onClick={async () => {
-            console.log('Submitting:', {
-              ...guestInfo,
-              hotel: selectedHotel.label,
-              checkIn: formatDate(rangeStart),
-              checkOut: formatDate(rangeEnd),
-              rooms: countroom,
-              adults: adult(),
-              children: children(),
-            });
-            await handleEnquirySubmit();
-            // setShowPopupForm(false);
-          }}
-     
-      >
+            setGuestInfo(prev => ({ ...prev, submitted: true }));
+            if (!guestInfo.name || !guestInfo.mobile) return;
+            
+            const submitBtn = event.target;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            try {
+              
+              await handleEnquirySubmit();
+            } finally {
+              submitBtn.textContent = 'Submit';
+              submitBtn.disabled = false;
+            }
+          }}>
         Submit
       </button>
       </div>
@@ -501,6 +502,15 @@ const handleEnquirySubmit = async () => {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .popup-field input {
+  font-size: 11px;
+  padding: 6px;
+  }
+
+
 }
 
 

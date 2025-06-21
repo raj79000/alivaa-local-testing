@@ -94,15 +94,15 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
           <form onSubmit={handleSubmit}>
             <div className="modal-body">
               <div className="row g-3">
-                <div className="col-md-6">
+                <div className="col-md-6 col-6">
                   <label htmlFor="name" className="form-label">Name</label>
                   <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} className="form-control" required />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 col-6">
                   <label htmlFor="phone" className="form-label">Phone</label>
                   <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange} className="form-control" maxLength={10} required />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 col-6">
                   <label className="form-label">Check-in Date</label>
                   <DatePicker
                     selected={checkinDate}
@@ -118,7 +118,7 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
                     required
                   />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 col-6">
                   <label className="form-label">Check-out Date</label>
                   <DatePicker
                     selected={checkoutDate}
@@ -129,15 +129,15 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
                     required
                   />
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 col-4">
                   <label htmlFor="rooms" className="form-label">Rooms</label>
                   <input type="number" name="rooms" id="rooms" value={formData.rooms} onChange={handleChange} className="form-control" min="1" required />
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 col-4">
                   <label htmlFor="adults" className="form-label">Adults</label>
                   <input type="number" name="adults" id="adults" value={formData.adults} onChange={handleChange} className="form-control" min="1" required />
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 col-4">
                   <label htmlFor="children" className="form-label">Children</label>
                   <input type="number" name="children" id="children" value={formData.children} onChange={handleChange} className="form-control" min="0" />
                 </div>
@@ -159,6 +159,10 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
 )}
 
 <style jsx>{`
+
+.modal{
+z-index:9999999999!important;
+}
 
 #LansEnquiryModal .btn-close{
   color: #000;
@@ -190,6 +194,24 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
   .modal-content{
   border-bottom: 5px solid #002d62;}
 
+  @media (max-width: 767px) {
+    .modal-content {
+      padding: 1rem;
+    }
+      .react-datepicker-wrapper .form-control,
+      .form-control{
+      font-size: 10px;
+          padding: 0.575rem .75rem!important;
+    }
+      label.form-label{
+      margin-bottom: 0px;
+    } 
+      #LansEnquiryModal .col-md-6,
+      #LansEnquiryModal .col-md-4 {
+        margin-bottom: .1rem !important;
+      }
+        
+  }
 
 `}
 </style>
