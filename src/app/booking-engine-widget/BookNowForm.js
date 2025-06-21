@@ -1,4 +1,5 @@
 "use client";
+import ReactDOM from 'react-dom';
 import * as React from "react";
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
@@ -19,12 +20,63 @@ export default function BookNowForm() {
   const { isFormOpen, setIsFormOpen } = useForm();
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const pathname = usePathname();
+  const [showPopupForm, setShowPopupForm] = useState(false);
+const [guestInfo, setGuestInfo] = useState({ name: '', email: '', mobile: '' });
 
   const {
     rangeStart, setRangeStart, selectEndDate, rangeEnd, setRangeEnd, today1,
     formRows, children, adult, countroom,
     handleIncrement, handleDecrement, addNewRow, handleRemove
   } = useBook();
+
+
+const handleEnquirySubmit = async () => {
+  const { name, email, mobile } = guestInfo;
+
+  if (!name || !mobile) {
+    toast.error("Name and Mobile are required");
+    return;
+  }
+
+  const payload = {
+    source_enquiry: "alivaa-jawai",
+    name: name,
+    phone: mobile,
+    // message: `Enquiry via popup form on ${pathname} (Email: ${email || 'N/A'})`,
+    message: `Test message`,
+    checkin_date: formatDate(rangeStart),
+    checkout_date: formatDate(rangeEnd),
+    rooms: countroom.toString(),
+    adults: adult().toString(),
+    children: children().toString(),
+    web_source: "alivaahotels.com"
+  };
+
+  try {
+    const response = await fetch("https://demo.cinuniverse.com/alivaa/be-enquiry.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+    console.log("Submitted enquiry data:", payload);
+    console.log("Server response:", data);
+
+    if (data.status === "success") {
+      toast.success(data.message || "Enquiry submitted successfully");
+      setShowPopupForm(false);
+      setGuestInfo({ name: '', email: '', mobile: '' }); // clear form
+    } else {
+      toast.error(data.message || "Failed to submit enquiry");
+    }
+  } catch (error) {
+    console.error("Error submitting enquiry:", error);
+    toast.error("Something went wrong. Please try again later.");
+  }
+};
 
   const hotelOptions = [
     {
@@ -57,12 +109,12 @@ export default function BookNowForm() {
       slug: 'lansdowne',
       url: 'https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709'
     },
-    // {
-    //   value: 'jawai',
-    //   label: 'Alivaa Hotel, Jawai',
-    //   slug: 'jawai',
-    //   url: 'https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709'
-    // },
+    {
+      value: 'jawai',
+      label: 'Alivaa Hotel, Jawai',
+      slug: 'jawai',
+      url: 'https://bookings.alivaahotels.com/inst/#/home?propertyId=863NTQTKSN9pxhpc7Nmf9ycwpyyT5hmcqmIJ9ILVwh0eqVxGX4ODY=&JDRN=Y&RoomID=209630,209631,209632,209633,209709'
+    },
   ];
 
   const checkInDatePickerRef = useRef(null);
@@ -85,7 +137,9 @@ export default function BookNowForm() {
 
   const lowerPath = pathname.toLowerCase();
 
-  if (lowerPath.includes('mcleodganj')) {
+  if (lowerPath.includes('jawai')) {
+  setSelectedHotel(hotelOptions.find(opt => opt.value === 'jawai'));
+  } else if (lowerPath.includes('mcleodganj')) {
     setSelectedHotel(hotelOptions.find(opt => opt.value === 'mcleodganj'));
   } else if (lowerPath.includes('gurgaon')) {
     setSelectedHotel(hotelOptions.find(opt => opt.value === 'gurugram1'));
@@ -137,6 +191,11 @@ export default function BookNowForm() {
   let bookingUrl = selectedHotel.url;
   const checkIn = formatDate(rangeStart);
   const checkOut = formatDate(rangeEnd);
+  if (selectedHotel.value === 'jawai') {
+  setShowPopupForm(true); // show popup instead of opening URL
+  return;
+}
+
 
   if (selectedHotel.value === 'mcleodganj') {
   let guestParams = [];
@@ -319,6 +378,143 @@ export default function BookNowForm() {
           {isFormOpen ? <X size={20} color="black" /> : <Search size={20} color="black" />}
         </button>
       </div>
+
+
+      {showPopupForm && ReactDOM.createPortal(
+  <div className="popup-overlay">
+    <div className="popup-form">
+      <button className="close-btn" onClick={() => setShowPopupForm(false)}>×</button>
+      <h4 className="mb-4 text-center">Complete Your Booking</h4>
+
+      <div className="popup-field">
+        <label>Hotel</label>
+        <input value={selectedHotel?.label} readOnly />
+      </div>
+
+      <div className="popup-field">
+        <label>Check-in</label>
+        <input value={formatDate(rangeStart)} readOnly />
+      </div>
+
+      <div className="popup-field">
+        <label>Check-out</label>
+        <input value={formatDate(rangeEnd)} readOnly />
+      </div>
+
+      <div className="popup-field">
+        <label>Rooms & Guests</label>
+        <input value={`Rooms: ${countroom}, Adults: ${adult()}, Children: ${children()}`} readOnly />
+      </div>
+
+      <div className="popup-field">
+        <label>Name</label>
+        <input type="text" value={guestInfo.name} onChange={(e) => setGuestInfo({ ...guestInfo, name: e.target.value })} />
+      </div>
+      <div className="popup-field">
+        <label>Mobile</label>
+        <input type="tel" value={guestInfo.mobile} onChange={(e) => setGuestInfo({ ...guestInfo, mobile: e.target.value })} />
+      </div>
+
+      <div className="text-center">
+        <button className="jawai-booking-submit-btn" 
+          onClick={async () => {
+            console.log('Submitting:', {
+              ...guestInfo,
+              hotel: selectedHotel.label,
+              checkIn: formatDate(rangeStart),
+              checkOut: formatDate(rangeEnd),
+              rooms: countroom,
+              adults: adult(),
+              children: children(),
+            });
+            await handleEnquirySubmit();
+            // toast.success("Thank you for your enquiry. We will get back to you shortly!");
+            setShowPopupForm(false);
+          }}
+     
+      >
+        Submit
+      </button>
+      </div>
+
+      
+    </div>
+  </div>,
+  document.body
+)}
+<style jsx>{`
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999;
+}
+
+.popup-form {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 500px;
+  position: relative;
+  z-index: 999999999999999;
+  border-bottom: 5px solid #002d62;
+}
+
+.popup-field {
+      margin-bottom: 1rem;
+    display: inline-block;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.popup-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.popup-field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+  .jawai-booking-submit-btn {
+  padding: 7px 15px;
+    margin-top: 1em;
+    border-radius: 4px;
+    background-color: #002d62;
+    border: 1px solid #000;
+    color: #fff;
+    border-radius: 4px !important;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+
+`}
+</style>
+
     </>
   );
 }

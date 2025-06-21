@@ -68,7 +68,7 @@ function JawaiHotelGallery() {
   return (
     <div className="container-md mt-4 mb-5 lansdowne-hotel-gallery-page mt-5">
       <div className="center text-center">
-        <h1 className="global-heading-gurgaon inner-hd">Hotel Gallery</h1>
+        <h1 className="global-heading-gurgaon inner-hd">Jawai Palash Resort Gallery</h1>
       </div>
       {/* Filter Buttons */}
       <ul className="nav nav-tabs mb-3 d-flex flex-row gap-2">
