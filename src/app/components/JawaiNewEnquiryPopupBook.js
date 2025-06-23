@@ -160,6 +160,10 @@ const JawaiNewEnquiryPopupBook = ({ source = "alivaa-jawai", webSource = "alivaa
 
 <style jsx>{`
 
+.modal{
+z-index: 9999999999!important;
+}
+
 #enquiryModall .btn-close{
   color: #000;
   opacity: 1;
