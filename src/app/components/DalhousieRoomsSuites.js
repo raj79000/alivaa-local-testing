@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import Link from "next/link";
+import Image from "next/image";
 import DalhousieNewEnquiryPopupBook from "./DalhousieNewEnquiryPopupBook";
 
 const DalhousieRoomsSuites = () => {
@@ -26,36 +27,46 @@ const DalhousieRoomsSuites = () => {
         >
           {[
             {
-              title: "Villa with Private Jacuzzi",
-              videoSrc: "/jawai-img/villa-with-private-jacuzzi-overview.mp4",
+              title: "Deluxe Room",
+              videoSrc: "/dalhousie-img/room-deluxe.png",
               description:
-                "Enjoy a comfortable stay with luxurious touch in our Villa with Private Jacuzzi...",
+                "Elegantly designed for solo travellers, our Deluxe Rooms offer...",
             },
             {
-              title: "Mud House",
-              videoSrc: "/jawai-img/mud-house-overview.mp4",
+              title: "Super Deluxe Room",
+              videoSrc: "/dalhousie-img/room-super-deluxe.png",
               description:
-                "Our Mud Houses in Jawai are a step into tradition that mirrors the life of...",
+                "Our Super Deluxe rooms provide a more spacious living area with...",
             },
             {
-              title: "Villa with Private Patio",
-              videoSrc: "/jawai-img/villa-with-private-patio-overview.mp4",
+              title: "Premium Room",
+              videoSrc: "/dalhousie-img/room-premium.png",
               description:
-                "Enter into tranquillity with our Villa in Jawai, combining modern design and...  ",
+                "Premium rooms at The Hoften Blue Magnets come with spacious ...",
             },
+             {
+              title: "Family Suite",
+              videoSrc: "/dalhousie-img/room-family.png",
+              description:
+                "Our Family suites have ample space for a family with 2 interconnected ...",
+            },
+             {
+              title: "Presidential Suite",
+              videoSrc: "/dalhousie-img/room-honeymoon-suite.png",
+              description:
+                "The epitome of luxury. With a lavish bedroom, king-sized bed...",
+            },
+            
             
           ].map((room, index) => (
             <SwiperSlide key={index}>
               <div className="winter-box p-1 text-center">
-                <video autoPlay loop muted playsInline className="w-100 over-room-vd primary-radius">
-                  <source src={room.videoSrc} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <Image src={room.videoSrc} alt={room.title} height={400} width={500} className="img-fluid w-100" />
                 <div className="winter-box-content carddd shadow-sm">
                   <h3 className="winter-box-heading">{room.title}</h3>
                   <p className="winter-box-para card-texttt">{room.description}</p>
                   <div className="winter-box-btn">
-                    <Link href="/jawai-palash-resort-rooms-suites" className="box-btn know-more">Explore More</Link>
+                    <Link href="/rooms-in-dalhousie" className="box-btn know-more">Explore More</Link>
                     <Link href="#" className="box-btn book-noww" data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry">Enquire Now</Link>
                   </div>
                 </div>

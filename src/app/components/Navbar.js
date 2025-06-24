@@ -99,6 +99,8 @@ export default function Navbar() {
                                                 <span className="menu-label">Hoften</span>
                                                 <ul className="inner_menu">  
                                                     <li><Link href="/gurugram-hotel">Gurugram </Link></li>
+                                                    <li><Link href="/hotels-in-dalhousie">Dalhousie </Link></li>
+                                                    
                                                 </ul>
                                             </li>
                                         

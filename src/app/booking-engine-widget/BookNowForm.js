@@ -39,8 +39,7 @@ const handleEnquirySubmit = async () => {
   }
  
   const payload = {
-    source_enquiry: selectedHotel.value === "jawai" ? "alivaa-jawai" : "alivaa-lansdowne",
-    name: name,
+    source_enquiry: selectedHotel.value === "jawai" ? "alivaa-jawai" : selectedHotel.value === "dalhousie" ? "alivaa-dalhousie" : "alivaa-lansdowne",    name: name,
     phone: mobile,
     message: ``,
     checkin_date: formatDate(rangeStart),
@@ -114,6 +113,12 @@ const handleEnquirySubmit = async () => {
       slug: 'jawai',
       url: ''
     },
+    {
+      value: 'dalhousie',
+      label: 'The Hoften Blue Magnets, Dalhousie',
+      slug: 'dalhousie',
+      url: ''
+    },
   ];
 
   const checkInDatePickerRef = useRef(null);
@@ -146,6 +151,9 @@ const handleEnquirySubmit = async () => {
     setSelectedHotel(hotelOptions.find(opt => opt.value === 'gurugram2'));
   } else if (lowerPath.includes('lansdowne')) {
     setSelectedHotel(hotelOptions.find(opt => opt.value === 'lansdowne'));
+  }
+  else if (lowerPath.includes('dalhousie')) {
+    setSelectedHotel(hotelOptions.find(opt => opt.value === 'dalhousie'));
   }
 }, [pathname]);
 
@@ -190,7 +198,7 @@ const handleEnquirySubmit = async () => {
   let bookingUrl = selectedHotel.url;
   const checkIn = formatDate(rangeStart);
   const checkOut = formatDate(rangeEnd);
-  if (selectedHotel.value === 'jawai' || selectedHotel.value === 'lansdowne') {
+  if (selectedHotel.value === 'jawai' || selectedHotel.value === 'lansdowne' || selectedHotel.value === 'dalhousie' ) {
   setShowPopupForm(true); // show popup instead of opening URL
   return;
 }
@@ -414,7 +422,7 @@ const handleEnquirySubmit = async () => {
             if (!guestInfo.name || !guestInfo.mobile) return;
             
             const submitBtn = event.target;
-            submitBtn.textContent = 'Submitting...';
+            submitBtn.textContent = 'Processing...';
             submitBtn.disabled = true;
 
             try {
