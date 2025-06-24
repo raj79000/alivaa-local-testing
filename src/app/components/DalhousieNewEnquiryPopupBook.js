@@ -143,9 +143,8 @@ const DalhousieNewEnquiryPopupBook = ({ source = "alivaa-dalhousie", webSource =
                   <label htmlFor="children" className="form-label">Children</label>
                   <input type="number" name="children" id="children" value={formData.children} onChange={handleChange} className="form-control" min="0" />
                 </div>
-
                 <button type="submit" className="btnjawai-submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Submit"}
+                  {isSubmitting ? "Processing..." : "Submit"}
                 </button>
               </div>
             </div>

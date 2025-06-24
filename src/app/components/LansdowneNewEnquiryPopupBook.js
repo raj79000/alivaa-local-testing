@@ -146,7 +146,7 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
                   <textarea name="message" id="message" value={formData.message} onChange={handleChange} className="form-control" rows="2" placeholder="Write your message here" />
                 </div> */}
                 <button type="submit" className="btnjawai-submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Submit"}
+                  {isSubmitting ? "Processing..." : "Submit"}
                 </button>
               </div>
             </div>

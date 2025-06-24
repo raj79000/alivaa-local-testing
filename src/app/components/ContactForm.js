@@ -1,215 +1,261 @@
 "use client";
 import { useState } from "react";
+import toast from "react-hot-toast";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    UserId: "",
-
     name: "",
-
     email: "",
-
-    subject: "",
-
     phone: "",
-
+    subject: "",
     message: "",
+    source_enquiry: "alivaa-blog-contact-us",
+    web_source: "alivaahotels.com",
   });
 
-  const [formErrors, setFormErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [responseMsg, setResponseMsg] = useState("");
+  const [errors, setErrors] = useState({});
 
-  const validateForm = () => {
-    let validationErrors = {};
-    if (!/^[a-zA-Z ]*$/.test(formData.name))
-      validationErrors.name = "Only alphabets are allowed.";
-    if (!/^[0-9]*$/.test(formData.phone))
-      validationErrors.phone = "Only numbers are allowed.";
-    if (
-      !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)
-    )
-      validationErrors.email = "Wrong email format.";
+  const validate = () => {
+    const newErrors = {};
 
-    if (!formData.email.includes("@"))
-      validationErrors.name = "Email must contain '@'.";
-    if (!formData.name.trim()) validationErrors.name = "Name is required.";
-    if (!formData.email.trim()) validationErrors.email = "Email is required.";
-    if (!formData.subject.trim())
-      validationErrors.subject = "Subject is required.";
-    if (!formData.phone.trim()) validationErrors.phone = "Phone is required.";
-    if (!formData.message.trim())
-      validationErrors.message = "Message is required.";
-    return validationErrors;
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = "Name must be at least 2 characters";
+    }
+
+    // Email validation (simple regex)
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      newErrors.email = "Email is invalid";
+    }
+
+    // Phone validation (digits only, length check)
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone is required";
+    } else if (!/^\d{10,}$/.test(formData.phone.trim())) {
+      newErrors.phone =
+        "Phone must be at least 10 digits and contain digits only";
+    }
+
+    // subject validation
+    if (!formData.subject.trim()) {
+      newErrors.subject = "subject is required";
+    } else if (formData.subject.trim().length < 3) {
+      newErrors.subject = "subject must be at least 5 characters";
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.trim().length < 5) {
+      newErrors.message = "Message must be at least 5 characters";
+    }
+
+    setErrors(newErrors);
+
+    // Return true if no errors
+    return Object.keys(newErrors).length === 0;
   };
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    setFormErrors((prev) => ({ ...prev, [name]: "" })); // Clear error for the current field
+    // Clear error message on input change
+    if (errors[name]) {
+      setErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormErrors(null);
 
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length > 0) {
-      setFormErrors((prev) => validationErrors);
+    if (!validate()) {
+      toast.error("Please fix the errors in the form.");
       return;
+    }
+
+    setLoading(true);
+    setResponseMsg("");
+
+    try {
+      const response = await fetch(
+        "https://demo.cinuniverse.com/alivaa/blog-contact-mail.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.status === "success") {
+        toast.success(result.message || "Form submitted successfully!");
+        setResponseMsg(result.message || "Form submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          source_enquiry: "alivaa-blog-contact-us",
+          web_source: "alivaahotels.com",
+        });
+        setErrors({});
+      } else {
+        toast.error(result.message || "Submission failed!");
+        setResponseMsg(result.message || "Submission failed!");
+      }
+    } catch (err) {
+      toast.error("Something went wrong. Please try again.");
+      setResponseMsg("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+      setTimeout(() => setResponseMsg(""), 8000); // Clear message after 5 seconds
     }
   };
 
   return (
     <>
-      <aside className="md-col-4">
+      <aside className="fixed-blog-form">
         <div className="commerce-side-panel blog-page-contact-form">
           <form
             onSubmit={handleSubmit}
             id="contact"
             name="info_form"
             className="i-amphtml-form"
+            noValidate
           >
-            <h3>
-              <b>Contact Form</b>
+            <h3 className="text-center">
+              <b>Contact Us</b>
             </h3>
 
             <h4></h4>
 
             <fieldset>
               <input
-                placeholder="Your name"
-                maxLength={100}
-                name="name"
                 type="text"
-                tabIndex="1"
-                id="name"
-                value={formData.name || ""}
-                onChange={handleInputChange}
+                name="name"
+                maxLength={30}
+                placeholder="Your Name"
+                required
+                value={formData.name}
+                onChange={handleChange}
+                className={`w-full p-2 border form-control ${
+                  errors.name ? "is-invalid" : ""
+                }`}
               />
-
-              {formErrors.name && (
-                <div className="text-danger">{formErrors.name}</div>
+              {errors.name && (
+                <small className="text-danger">{errors.name}</small>
               )}
             </fieldset>
 
             <fieldset>
               <input
-                maxLength={100}
-                placeholder="Your Email Address"
-                name="email"
                 type="email"
-                tabIndex="2"
-                id="email"
-                value={formData.email || ""}
-                onChange={handleInputChange}
+                name="email"
+                placeholder="Your Email"
+                maxLength={100}
+                required
+                value={formData.email}
+                onChange={handleChange}
+                className={`w-full p-2 border form-control ${
+                  errors.email ? "is-invalid" : ""
+                }`}
               />
-
-              {formErrors.email && (
-                <div className="text-danger">{formErrors.email}</div>
+              {errors.email && (
+                <small className="text-danger">{errors.email}</small>
               )}
             </fieldset>
 
             <fieldset>
               <input
-                placeholder="Your Phone Number"
+                type="tel"
                 maxLength={10}
                 name="phone"
-                type="tel"
-                tabIndex="3"
-                id="phone"
-                value={formData.phone || ""}
-                onChange={handleInputChange}
+                placeholder="Your Phone Number"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+                className={`w-full p-2 border form-control ${
+                  errors.phone ? "is-invalid" : ""
+                }`}
               />
-
-              {formErrors.phone && (
-                <div className="text-danger">{formErrors.phone}</div>
+              {errors.phone && (
+                <small className="text-danger">{errors.phone}</small>
               )}
             </fieldset>
 
             <fieldset>
               <input
-                placeholder="Your Web Site"
-                maxLength={100}
                 type="text"
                 name="subject"
-                tabIndex="4"
-                id="subject"
-                value={formData.subject || ""}
-                onChange={handleInputChange}
+                max={50}
+                placeholder="Subject"
+                required
+                value={formData.subject}
+                onChange={handleChange}
+                className={`w-full p-2 border form-control ${
+                  errors.subject ? "is-invalid" : ""
+                }`}
               />
-
-              {formErrors.subject && (
-                <div className="text-danger">{formErrors.subject}</div>
+              {errors.subject && (
+                <small className="text-danger">{errors.subject}</small>
               )}
             </fieldset>
 
             <fieldset>
               <textarea
-                placeholder="Type your message here...."
-                maxLength={1000}
                 name="message"
-                tabIndex="5"
-                id="message"
-                value={formData.message || ""}
-                onChange={handleInputChange}
-              ></textarea>
-              {formErrors.message && (
-                <div className="text-danger">{formErrors.message}</div>
+                placeholder="Message"
+                maxLength={500}
+                required
+                value={formData.message}
+                onChange={handleChange}
+                className={`w-full p-2 border form-control ${
+                  errors.message ? "is-invalid" : ""
+                }`}
+              />
+              {errors.message && (
+                <small className="text-danger">{errors.message}</small>
               )}
             </fieldset>
 
             <fieldset>
               <button
-                name="submit"
-                className="contactSubmit"
                 type="submit"
-                id="contact-submit"
+                disabled={loading}
+                className="btn contactSubmit-blog mt-1"
               >
-                Submit
+                {loading ? "Sending..." : "Submit"}
               </button>
+
+              {/* ✅ Response Message */}
+              {responseMsg && (
+                <p
+                  className="mt-3 "
+                  style={{
+                    color: responseMsg.toLowerCase().includes("success")
+                      ? "green"
+                      : "green",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {responseMsg}
+                </p>
+              )}
             </fieldset>
           </form>
         </div>
-
-        {/* <div className="mt-3 mx1">
-          <fieldset className="content-boxx text-center">
-            <div className="mt-3" id="archives">
-              <a href="/new-year-celebration-gurgaon" className="archive-link">
-                Celebrate The New Year In Luxury At Alivaa Hotels, Gurgaon
-              </a>
-
-              <a
-                href="/hotel-near-medanta-hospital-gurgaon"
-                className="archive-link"
-              >
-                Hotel Near Medanta Hospital, Gurgaon
-              </a>
-
-              <a
-                href="restaurants-near-huda-city-centre"
-                className="archive-link"
-              >
-                Discover Restaurants Near Huda City Centre
-              </a>
-
-              <a href="best-hotels-near-sector-45" className="archive-link">
-                Finding The Best Hotels Near Sector 45, Gurgaon: A Complete
-                Guide
-              </a>
-
-              <a href="best-hotel-deals-in-gurugram" className="archive-link">
-                Finding The Best Hotel Deals In Gurugram
-              </a>
-
-              <a href="/gurugram-hotel-deal" className="archive-link">
-                Gurugram Hotel Deal: How To Book A Great Stay In Gurugram
-              </a>
-
-              <a href="places-to-visit-in-gurgaon" className="archive-link">
-                Must-see Places In Gurgaon: A Guide To The City's Highlights
-              </a>
-            </div>
-          </fieldset>
-        </div> */}
       </aside>
     </>
   );

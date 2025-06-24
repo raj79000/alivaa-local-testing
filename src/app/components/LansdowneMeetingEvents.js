@@ -76,7 +76,7 @@ const LansdowneMeetingEvents = () => {
                               animationDuration: "6s",
                             }}
                             initial={{ opacity: 0, y: -250, x: -1150 }}
-                            whileInView={{ opacity: 1, x: -637 }}
+                            whileInView={{ opacity: 1, x: -800 }}
                             transition={{ duration: 0.9, delay: 0.9 }}
                           >
                             <h3

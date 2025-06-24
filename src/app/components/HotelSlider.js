@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import JawaiNewEnquiryPopupBook from "./JawaiNewEnquiryPopupBook";
 import LansdowneNewEnquiryPopupBook from "./LansdowneNewEnquiryPopupBook";
+import DalhousieNewEnquiryPopupBook from "./DalhousieNewEnquiryPopupBook";
 
 const OurHotelsSlider = () => {
   return (
@@ -60,6 +61,21 @@ const OurHotelsSlider = () => {
                   <div className="winter-box-btn">
                     <Link href="/gurugram-hotel" className="box-btn know-more">Explore More</Link>
                     <Link href="https://bookings.alivaahotels.com/inst/#/home?propertyId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=&JDRN=Y&RoomID=210380,210381,210383,210384,210385&ap=1&gsId=402NT4HhhBGbbpoRahFpDYw3nQ5NDM=" className="box-btn book-noww">Book Now</Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+             <SwiperSlide>
+              <div className="winter-box shadow-sm">
+                <Image height={200} width={200} src="/dalhousie-img/hoften-dalhousie.png" alt="The Hoften" className="w-100 primary-radius mt-0" />
+                <div className="winter-box-content carddd">
+                  <h3 className="winter-box-heading">The Hoften Blue Magnets, Dalhousie</h3>
+                  <p className="winter-box-para card-texttt">Welcome to one of the best hotels in Dalhousie, where....</p>
+                  <Link href="/hotels-in-dalhousie" className="read-more-btnnn">Read more</Link>
+                  <div className="winter-box-btn">
+                    <Link href="/hotels-in-dalhousie" className="box-btn know-more">Explore More</Link>
+                    <Link href="#" className="box-btn book-noww" data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry">Enquire Now</Link>
                   </div>
                 </div>
               </div>
@@ -178,6 +194,7 @@ const OurHotelsSlider = () => {
 
     <JawaiNewEnquiryPopupBook />
     <LansdowneNewEnquiryPopupBook />
+    <DalhousieNewEnquiryPopupBook />
 
     </>
   );

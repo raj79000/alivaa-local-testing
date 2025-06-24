@@ -146,7 +146,7 @@ const JawaiNewEnquiryPopupBook = ({ source = "alivaa-jawai", webSource = "alivaa
                   <textarea name="message" id="message" value={formData.message} onChange={handleChange} className="form-control" rows="2" placeholder="Write your message here" />
                 </div> */}
                 <button type="submit" className="btnjawai-submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Submit"}
+                  {isSubmitting ? "Processing..." : "Submit"}
                 </button>
               </div>
             </div>
@@ -159,10 +159,6 @@ const JawaiNewEnquiryPopupBook = ({ source = "alivaa-jawai", webSource = "alivaa
 )}
 
 <style jsx>{`
-
-.modal{
-z-index: 9999999999!important;
-}
 
 #enquiryModall .btn-close{
   color: #000;

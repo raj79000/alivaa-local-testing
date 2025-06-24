@@ -63,7 +63,7 @@ const Footer = () => {
               </motion.div>
 
               {/* Contact Section */}
-              <motion.div className="col-lg-4 col-sm-6" 
+              <motion.div className="col-lg-4 col-sm-6 mobile-center-items" 
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <p className="footer-link ftr-location">
                   <img src="/images/map-icon.svg" alt="Map Icon" className="map-marker social-icon" width={38} height={38} />
                   <a href="https://www.google.com/maps/place/Alivaa+Hotel+Gurugram+Sohna+Road+City+Center/" target="_blank" rel="noopener noreferrer">
-                    Alivaa Hotel Gurugram Sohna Road City Center
+                    Alivaa Hotel, Gurugram, Sohna Road, City Center
                   </a>
                 </p>
                 <p className="footer-link">
@@ -89,7 +89,7 @@ const Footer = () => {
 
           {/* Dynamic Copyright Year */}
           <span className="bottom-footer">
-            Copyright © {new Date().getFullYear()} The Alivaa Hotels & Resorts. All rights reserved by Liberate Hotels and Resorts Private Limited.
+            Copyright © {new Date().getFullYear()} The Alivaa Hotels & Resorts. All rights reserved by Liberate Hotels and Resorts Private Limited. Powered by <a href="https://www.cinuniverse.com/" target="_blank" className="text-white">CIN Universe</a>.
           </span>
         </footer>
   );

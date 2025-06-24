@@ -337,7 +337,7 @@ const [formData, setFormData] = useState({
     <div className="row">
       <div className="col-lg-12 col-md-12 col-xs-12 voffset-bottom2">
          <button type="submit" disabled={loading} className="btn btn-primary mt-3">
-                    {loading ? 'Sending...' : 'Submit'}
+                    {loading ? 'Processing...' : 'Submit'}
                   </button>
 
                   {/* ✅ Response Message */}
