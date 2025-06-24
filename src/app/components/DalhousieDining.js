@@ -95,7 +95,7 @@ const DalhousieDining = () => {
               <div className="col-md-5 space_in d-flex flex-column justify-content-center">
                 <h2 className="inner-head mt-5">Daalchini</h2>
                 <p className="mb-2 text-justify" style={{ textAlign: 'justify' }}>
-                 Indulge in a wide range of luscious bites at our multicuisine restaurant in Dalhousie. The Hoften Blue Magnets restaurant serves some of the choicest dishes from continental, oriental, and all other sorts of cuisine that you may want to taste during your stay. With its plush interiors, comfortable seats, and a surreal outside view, the restaurant has a very inviting vibe. You’d definitely want to have your breakfast, lunch, and dinner here with your friends, family, or colleagues.
+                 Indulge in a wide range of luscious bites at our multicuisine restaurant in Dalhousie. Daalchini serves some of the choicest dishes from continental, oriental, and all other sorts of cuisine that you may want to taste during your stay. With its plush interiors, comfortable seats, and a surreal outside view, the restaurant has a very inviting vibe. You’d definitely want to have your breakfast, lunch, and dinner here with your friends, family, or colleagues.
                 </p>
                 <div className="new-text-center">
                   <a className="alivactacolor box-btn  bg_green rounded-0 btn btn-dark mt-3 auto-width-btn" data-bs-toggle="modal" data-bs-target="#banquet-enquiry">Enquire Now</a>

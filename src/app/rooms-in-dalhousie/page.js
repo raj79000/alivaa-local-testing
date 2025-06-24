@@ -21,6 +21,8 @@ export default function DalhousieAccommodationPage() {
   const [modalShow1, setModalShow1] = useState(false);
   const [modalShow2, setModalShow2] = useState(false);
   const [modalShow3, setModalShow3] = useState(false);
+  const [modalShow4, setModalShow4] = useState(false);
+  const [modalShow5, setModalShow5] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   return (
     <>
@@ -51,8 +53,11 @@ export default function DalhousieAccommodationPage() {
       </section>
       <div className="container text-center sectiontop">
         <h1 className="global-heading-gurgaon mb-2 inner-hd">
-          Rooms in Dalhousie
+          Comfortable Hotel Rooms in Dalhousie
         </h1>
+        <p>At The Hoften Blue Magnets, Dalhousie, we’ve carefully curated a range of room options suitable for every kind of traveller. Whether you’re visiting the town for business, tourism, or for a retreat with your friends/family, we have a room made just for you. 
+        </p>
+        <h5 className=" mt-3 pb-4">Check Out The Best Hotel Rooms and Suites in Dalhousie</h5>
       </div>
       <div id="gurgaon-accommodation">
 
@@ -64,10 +69,23 @@ export default function DalhousieAccommodationPage() {
                 <div className="col-md-5 order-mob p-3 flex flex-col justify-center p-6 align-self-center">
                   <h2 className="global-heading text-2xl font-bold text-gray-800">Deluxe Room</h2>
                   <p className="mb-2 text-gray-600" style={{ textAlign: "justify" }}>
-                    Elegantly designed for solo travellers, our Deluxe Rooms offer a comfortable space with scenic mountain views.
+                    Designed for solo travellers or couples, our Deluxe rooms offer comfortable accommodation in Dalhousie with high-quality interiors, well-appointed washrooms, and professional room service. They also provide scenic views of the mountains and greenery, making them a perfect choice for your stay in Dalhousie. A perfect blend of modern comfort with scenic beauty at an affordable price point, this combination is unbeatable.
                   </p>
-                 
 
+                  <a
+                  href="#"
+                  className="text-primary d-block mt-1 mb-1 text-black font-semibold cursor-pointer hover:underline flex items-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setModalShow1(true); // Show the modal when clicking Read More
+                  }}
+                >
+                  {showMore ? "Read Less" : "Read More"}
+                  <FontAwesomeIcon
+                    icon={showMore ? faArrowCircleUp : faArrowCircleDown}
+                    className="ms-2 text-lg"
+                  />
+                </a>
 
                   <a
                     href="#"
@@ -85,6 +103,32 @@ export default function DalhousieAccommodationPage() {
             </div>
           </div>
         </section>
+
+        {/* Modal for Read More */}
+      <Modal className="featur_modal" show={modalShow1} onHide={() => setModalShow1(false)}>
+        <Modal.Header closeButton className="fs-4">
+          <Modal.Title>Amenities & Facilities</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <motion.ul
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="mt-3 list-disc list-inside text-gray-600"
+          >
+           
+            <li>Power backup</li>
+            <li>Coffee maker</li>
+            <li>High-speed WiFi</li>
+            <li>Room service</li>
+            <li>Doctor on call</li>
+            <li>Laundry service (chargeable)</li>
+            <li>Iron and ironing boards (on request)</li>
+            
+            </motion.ul>
+        </Modal.Body>
+      </Modal>
         
 
         <section className="room_cs">
@@ -102,8 +146,24 @@ export default function DalhousieAccommodationPage() {
                 <div className="col-md-5 p-3 flex-column justify-content-center align-self-center">
                   <h2 className="global-heading">Super Deluxe Room</h2>
                   <p className="mb-2" style={{ textAlign: "justify" }}>
-                    Our Super Deluxe rooms provide a more spacious living area with plush interiors and top-notch amenities.
+                    The Super Deluxe Room takes the comfort and elegance of Deluxe Rooms to the next level with a more spacious living area, better furnishings, and top-notch amenities. Designed for couples seeking a romantic escape, the Super Deluxe Room at The Hoften Blue Magnets offers panoramic views of Dalhousie’s Dhauladhar mountain range from the windows.  
+
                   </p>
+
+                  <a
+                  href="#"
+                  className="text-primary d-block mt-1 mb-1 text-black font-semibold cursor-pointer hover:underline flex items-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setModalShow2(true); // Show the modal when clicking Read More
+                  }}
+                >
+                  {showMore ? "Read Less" : "Read More"}
+                  <FontAwesomeIcon
+                    icon={showMore ? faArrowCircleUp : faArrowCircleDown}
+                    className="ms-2 text-lg"
+                  />
+                </a>
                  
                   <a
                     href="#"
@@ -118,6 +178,32 @@ export default function DalhousieAccommodationPage() {
           </div>
         </section>
 
+          {/* Modal for Read More */}
+      <Modal className="featur_modal" show={modalShow2} onHide={() => setModalShow2(false)}>
+        <Modal.Header closeButton className="fs-4">
+          <Modal.Title>Amenities & Facilities</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <motion.ul
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="mt-3 list-disc list-inside text-gray-600"
+          >
+           
+            <li>Power backup</li>
+            <li>Coffee maker</li>
+            <li>High-speed WiFi</li>
+            <li>Room service</li>
+            <li>Doctor on call</li>
+            <li>Laundry service (chargeable)</li>
+            <li>Iron and ironing boards (on request)</li>
+            
+            </motion.ul>
+        </Modal.Body>
+      </Modal>
+
        
         <section className="sec-padding room_cs py-10">
           <div className="container-md bg-gray-100 p-0 shadow-lg rounded-lg">
@@ -127,8 +213,24 @@ export default function DalhousieAccommodationPage() {
                 <div className="col-md-5 order-mob p-3 flex flex-col justify-center p-6 align-self-center">
                   <h2 className="global-heading text-2xl font-bold text-gray-800">Premium Room</h2>
                   <p className="mb-2 text-gray-600" style={{ textAlign: "justify" }}>
-                    Premium rooms at The Hoften Blue Magnets come with spacious living areas, well-appointed bathrooms, private balconies, and 3 king/queen-sized beds.
+                    The Premium Room at The Hoften Blue Magnets, Dalhousie offers a premium experience with the serene views of this Himachali town from a private balcony. The living area is more spacious, and each room comes with 3 king/queen-size beds, a well-appointed bathroom, and best-in-class amenities. The personalised service and tranquil ambience of these rooms make them even more appealing, making you want to stay here forever!
+
                   </p>
+
+                  <a
+                  href="#"
+                  className="text-primary d-block mt-1 mb-1 text-black font-semibold cursor-pointer hover:underline flex items-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setModalShow3(true); // Show the modal when clicking Read More
+                  }}
+                >
+                  {showMore ? "Read Less" : "Read More"}
+                  <FontAwesomeIcon
+                    icon={showMore ? faArrowCircleUp : faArrowCircleDown}
+                    className="ms-2 text-lg"
+                  />
+                </a>
                   
                   <a
                     href="#"
@@ -147,6 +249,33 @@ export default function DalhousieAccommodationPage() {
           </div>
         </section>
 
+              {/* Modal for Read More */}
+      <Modal className="featur_modal" show={modalShow3} onHide={() => setModalShow3(false)}>
+        <Modal.Header closeButton className="fs-4">
+          <Modal.Title>Amenities & Facilities</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <motion.ul
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="mt-3 list-disc list-inside text-gray-600"
+          >
+           
+            <li>Power backup</li>
+            <li>Coffee maker</li>
+            <li>High-speed WiFi</li>
+            <li>Room service</li>
+            <li>Doctor on call</li>
+            <li>Laundry service (chargeable)</li>
+            <li>Iron and ironing boards (on request)</li>
+            
+            </motion.ul>
+        </Modal.Body>
+      </Modal>
+
+
         <section className="room_cs">
           <div className="container-md p-0 shadow-lg">
             <div className="global-heading-sec text-start">
@@ -162,8 +291,24 @@ export default function DalhousieAccommodationPage() {
                 <div className="col-md-5 p-3 flex-column justify-content-center align-self-center">
                   <h2 className="global-heading">Family Suite</h2>
                   <p className="mb-2" style={{ textAlign: "justify" }}>
-                    Our Family suites have ample space for a family with 2 interconnected rooms, en-suite bathrooms, flat-screen TVs and WiFi. 
+                   Our Family Suites are thoughtfully designed to offer comfort, space, and convenience for families seeking a memorable stay. Featuring two interconnected bedrooms, two well-appointed bathrooms, and ample space to unwind, these suites are ideal for families looking to stay together while enjoying privacy. Whether you’re relaxing after a day of sightseeing or spending quality time together, the Family Suite provides the perfect setting amidst the hills.
+
                   </p>
+
+                  <a
+                  href="#"
+                  className="text-primary d-block mt-1 mb-1 text-black font-semibold cursor-pointer hover:underline flex items-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setModalShow4(true); // Show the modal when clicking Read More
+                  }}
+                >
+                  {showMore ? "Read Less" : "Read More"}
+                  <FontAwesomeIcon
+                    icon={showMore ? faArrowCircleUp : faArrowCircleDown}
+                    className="ms-2 text-lg"
+                  />
+                </a>
                  
                   <a
                     href="#"
@@ -178,6 +323,32 @@ export default function DalhousieAccommodationPage() {
           </div>
         </section>
 
+                {/* Modal for Read More */}
+      <Modal className="featur_modal" show={modalShow4} onHide={() => setModalShow4(false)}>
+        <Modal.Header closeButton className="fs-4">
+          <Modal.Title>Amenities & Facilities</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <motion.ul
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="mt-3 list-disc list-inside text-gray-600"
+          >
+           
+            <li>Power backup</li>
+            <li>Coffee maker</li>
+            <li>High-speed WiFi</li>
+            <li>Room service</li>
+            <li>Doctor on call</li>
+            <li>Laundry service (chargeable)</li>
+            <li>Iron and ironing boards (on request)</li>
+            
+            </motion.ul>
+        </Modal.Body>
+      </Modal>
+
         <section className="sec-padding room_cs py-10">
           <div className="container-md bg-gray-100 p-0 shadow-lg rounded-lg">
             <div className="global-heading-sec text-start">
@@ -186,8 +357,23 @@ export default function DalhousieAccommodationPage() {
                 <div className="col-md-5 order-mob p-3 flex flex-col justify-center p-6 align-self-center">
                   <h2 className="global-heading text-2xl font-bold text-gray-800">Presidential Suite</h2>
                   <p className="mb-2 text-gray-600" style={{ textAlign: "justify" }}>
-                    The epitome of luxury. With a lavish bedroom, king-sized bed, separate dining area, jacuzzi, and a private balcony, our Presidential Suite offers the best of everything.
+                    Our Presidential Suite is an exceptional choice for those seeking an ultimate luxury. This suite boasts a spacious living area, an elegant dining space, and a private balcony offering breathtaking panoramic views of the surrounding hills. Every detail of the Presidential Suite is designed to provide an extraordinary experience
                   </p>
+
+                  <a
+                  href="#"
+                  className="text-primary d-block mt-1 mb-1 text-black font-semibold cursor-pointer hover:underline flex items-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setModalShow5(true); // Show the modal when clicking Read More
+                  }}
+                >
+                  {showMore ? "Read Less" : "Read More"}
+                  <FontAwesomeIcon
+                    icon={showMore ? faArrowCircleUp : faArrowCircleDown}
+                    className="ms-2 text-lg"
+                  />
+                </a>
                   
                   <a
                     href="#"
@@ -205,6 +391,32 @@ export default function DalhousieAccommodationPage() {
             </div>
           </div>
         </section>
+
+        {/* Modal for Read More */}
+      <Modal className="featur_modal" show={modalShow5} onHide={() => setModalShow5(false)}>
+        <Modal.Header closeButton className="fs-4">
+          <Modal.Title>Amenities & Facilities</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <motion.ul
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="mt-3 list-disc list-inside text-gray-600"
+          >
+           
+            <li>Power backup</li>
+            <li>Coffee maker</li>
+            <li>High-speed WiFi</li>
+            <li>Room service</li>
+            <li>Doctor on call</li>
+            <li>Laundry service (chargeable)</li>
+            <li>Iron and ironing boards (on request)</li>
+            
+            </motion.ul>
+        </Modal.Body>
+      </Modal>
 
       </div>
 

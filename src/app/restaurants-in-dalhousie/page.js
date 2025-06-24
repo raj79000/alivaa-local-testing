@@ -51,7 +51,7 @@ export default function DalhousieDiningPage() {
 
       <div className="container text-center sectiontop">
         <h1 className="global-heading-gurgaon inner-hd">
-          Restaurants in Dalhousie
+          Multicuisine Restaurant in Dalhousie
         </h1>
         <p className="content-boxx">
           A comfortable stay is not comfortable at all if it’s not combined with delicious meals. We understand this well, which is why The Hoften Blue Magnets houses one of the best multi-cuisine restaurants in Dalhousie. 

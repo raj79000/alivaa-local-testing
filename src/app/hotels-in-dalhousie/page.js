@@ -231,7 +231,7 @@ export default function DalhousieHotelPage() {
                             <article className="container-fluid no-padd">
                                 <div className="col-lg-12 text-center wow fadeInDown animated" data-wow-duration="4s" style={{ visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }}>
                                     <h4 className="global-heading-gurgaon inner-hd text-center mt-0 pt-0">Gallery</h4>
-                                    {/* <p>Take a whirlwind tour or catch a quick glimpse of what to expect at the most fashionable and, dare we say, the coolest hotel in town.</p> */}
+                                    <p>Check out what goes on at the coolest, most comfortable, and best place to stay in Dalhousie.</p>
                                 </div>
                                 <div className="col-lg-12 no-padd wow fadeInUp animated" data-wow-duration="4s" style={{ visibility: "visible", WebkitAnimationDuration: "4s", MozAnimationDuration: "4s", animationDuration: "4s" }}>
                                     <div className="owl-carousel owl-theme gal-slider owl-loaded owl-drag">
