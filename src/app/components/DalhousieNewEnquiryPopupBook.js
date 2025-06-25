@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -9,6 +9,8 @@ const DalhousieNewEnquiryPopupBook = ({ source = "alivaa-dalhousie", webSource =
   const today = new Date();
   const tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
+
+  
 
   const [checkinDate, setCheckinDate] = useState(today);
   const [checkoutDate, setCheckoutDate] = useState(tomorrow);

@@ -1,18 +1,12 @@
 "use client";
-//import BookingForm from "app/components/BookingForm";
 import "../../app/styles/inner.css";
-import GurgaonAccommodation from "../components/GurgaonAccommodation";
-import GurgaonHotelOffers from "../components/GurgaonHotelOffers";
 import NavbarAliva from "app/components/NavbarAliva";
 import React, { useEffect} from 'react';
-// import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { useState } from "react";
-import { FormProvider } from "app/booking-engine-widget/FormContext";
 import BookNowForm from "app/booking-engine-widget/BookNowForm";
 import HeaderLansdowne from "app/components/HeaderLansdowne";
 import LansdowneNewEnquiryPopupBook from "app/components/LansdowneNewEnquiryPopupBook";

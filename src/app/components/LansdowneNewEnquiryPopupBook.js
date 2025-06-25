@@ -1,19 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import ReactDOM from 'react-dom';
+import * as ReactDOM from "react-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource = "alivaahotels.com" }) => {
-
   const today = new Date();
   const tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
 
   const [checkinDate, setCheckinDate] = useState(today);
   const [checkoutDate, setCheckoutDate] = useState(tomorrow);
-
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -22,8 +20,12 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
     adults: "1",
     children: "0",
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true); // ensures document is available
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,12 +42,12 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
     setIsSubmitting(true);
 
     const payload = {
-  ...formData,
-  source_enquiry: "alivaa-lansdowne",
-  web_source: webSource,
-  checkin_date: checkinDate.toISOString().split("T")[0],
-  checkout_date: checkoutDate.toISOString().split("T")[0],
-};
+      ...formData,
+      source_enquiry: source,
+      web_source: webSource,
+      checkin_date: checkinDate.toISOString().split("T")[0],
+      checkout_date: checkoutDate.toISOString().split("T")[0],
+    };
 
     try {
       const res = await fetch("https://demo.cinuniverse.com/alivaa/be-enquiry.php", {
@@ -59,8 +61,6 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
       if (result.status === "success") {
         toast.success(result.message);
         document.getElementById("enquiryModalClose").click();
-
-        // Reset form
         setFormData({
           name: "",
           phone: "",
@@ -83,8 +83,15 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
 
   return (
     <>
-    {ReactDOM.createPortal(
-    <div className="modal fade" id="LansEnquiryModal" tabIndex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+   {isClient &&
+        ReactDOM.createPortal(
+          <div
+            className="modal fade"
+            id="LansEnquiryModal"
+            tabIndex="-1"
+            aria-labelledby="enquiryModalLabel"
+            aria-hidden="true"
+          >
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header py-3">
@@ -155,8 +162,8 @@ const LansdowneNewEnquiryPopupBook = ({ source = "alivaa-lansdowne", webSource =
         </div>
       </div>
     </div>,
-  document.body
-)}
+      document.body
+    )}
 
 <style jsx>{`
 

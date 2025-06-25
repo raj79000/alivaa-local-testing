@@ -1,11 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import ReactDOM from 'react-dom';
+import * as ReactDOM from "react-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const JawaiNewEnquiryPopupBook = ({ source = "alivaa-jawai", webSource = "alivaahotels.com" }) => {
+
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+      setIsClient(true); // ensures document is available
+    }, []);
 
   const today = new Date();
   const tomorrow = new Date();
@@ -83,7 +88,8 @@ const JawaiNewEnquiryPopupBook = ({ source = "alivaa-jawai", webSource = "alivaa
 
   return (
     <>
-    {ReactDOM.createPortal(
+    {isClient &&
+            ReactDOM.createPortal(
     <div className="modal fade" id="enquiryModall" tabIndex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
