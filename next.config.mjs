@@ -36,7 +36,17 @@ const nextConfig = {
 // },
 	  async redirects() {
 return [
-	{
+      {
+        source: '/index.php',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+	    {
         source: '/gurugram-meeting-events.php',
         destination: '/gurugram-meeting-events',
         permanent: true,
