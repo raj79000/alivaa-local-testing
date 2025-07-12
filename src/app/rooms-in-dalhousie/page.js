@@ -88,11 +88,11 @@ export default function DalhousieAccommodationPage() {
                 </a>
 
                   <a
-                    href="#"
-                    className="rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62" }} data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry"
+                    href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id%3Dcee239fd-433d-4700-bd55-67795c3eca05%26type%3D2&checkInDate=2025-07-12&checkOutDate=2025-07-13&guest=[ac1%3D2]&roomPropertyID=cee239fd-433d-4700-bd55-67795c3eca05"
+                    className=" rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: "#002d62" }}
                   >
-                    Enquire Now
+                    Book Now
                   </a>
                 </div>
 
@@ -166,11 +166,11 @@ export default function DalhousieAccommodationPage() {
                 </a>
                  
                   <a
-                    href="#"
+                    href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id%3Dcee239fd-433d-4700-bd55-67795c3eca05%26type%3D2&checkInDate=2025-07-12&checkOutDate=2025-07-13&guest=[ac1%3D2]&roomPropertyID=cee239fd-433d-4700-bd55-67795c3eca05"
                     className=" rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62" }} data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry"
+                    style={{ backgroundColor: "#002d62" }}
                   >
-                    Enquire Now
+                    Book Now
                   </a>
                 </div>
               </div>
@@ -233,11 +233,11 @@ export default function DalhousieAccommodationPage() {
                 </a>
                   
                   <a
-                    href="#"
+                    href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id%3Dcee239fd-433d-4700-bd55-67795c3eca05%26type%3D2&checkInDate=2025-07-12&checkOutDate=2025-07-13&guest=[ac1%3D2]&roomPropertyID=cee239fd-433d-4700-bd55-67795c3eca05"
                     className=" rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62" }} data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry"
+                    style={{ backgroundColor: "#002d62" }}
                   >
-                    Enquire Now
+                    Book Now
                   </a>
                 </div>
                 {/* Right Column */}
@@ -311,11 +311,11 @@ export default function DalhousieAccommodationPage() {
                 </a>
                  
                   <a
-                    href="#"
+                    href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id%3Dcee239fd-433d-4700-bd55-67795c3eca05%26type%3D2&checkInDate=2025-07-12&checkOutDate=2025-07-13&guest=[ac1%3D2]&roomPropertyID=cee239fd-433d-4700-bd55-67795c3eca05"
                     className=" rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62" }} data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry"
+                    style={{ backgroundColor: "#002d62" }}
                   >
-                    Enquire Now
+                    Book Now
                   </a>
                 </div>
               </div>
@@ -376,11 +376,11 @@ export default function DalhousieAccommodationPage() {
                 </a>
                   
                   <a
-                    href="#"
+                    href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id%3Dcee239fd-433d-4700-bd55-67795c3eca05%26type%3D2&checkInDate=2025-07-12&checkOutDate=2025-07-13&guest=[ac1%3D2]&roomPropertyID=cee239fd-433d-4700-bd55-67795c3eca05"
                     className=" rounded-0 box-btn bg-green-500 mt-3 text-white d-inline-block px-4 py-2 mt-3 rounded-md shadow hover:bg-green-600 transition duration-300 ease-in-out"
-                    style={{ backgroundColor: "#002d62" }} data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry"
+                    style={{ backgroundColor: "#002d62" }}
                   >
-                    Enquire Now
+                    Book Now
                   </a>
                 </div>
                 {/* Right Column */}

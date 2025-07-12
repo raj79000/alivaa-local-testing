@@ -75,7 +75,9 @@ const OurHotelsSlider = () => {
                   <Link href="/hotels-in-dalhousie" className="read-more-btnnn">Read more</Link>
                   <div className="winter-box-btn">
                     <Link href="/hotels-in-dalhousie" className="box-btn know-more">Explore More</Link>
-                    <Link href="#" className="box-btn book-noww" data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry">Enquire Now</Link>
+                    <Link href="https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id%3Dcee239fd-433d-4700-bd55-67795c3eca05%26type%3D2&checkInDate=2025-07-12&checkOutDate=2025-07-13&guest=[ac1%3D2]&roomPropertyID=cee239fd-433d-4700-bd55-67795c3eca05" className="box-btn book-noww">Book Now</Link>
+                    {/* <Link href="#" className="box-btn book-noww" data-bs-toggle="modal" data-bs-target="#dalhousie-enquiry">Enquire Now</Link> */}
+                  
                   </div>
                 </div>
               </div>

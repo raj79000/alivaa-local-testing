@@ -114,11 +114,11 @@ const handleEnquirySubmit = async () => {
       url: ''
     },
     {
-      value: 'dalhousie',
-      label: 'The Hoften Blue Magnets, Dalhousie',
-      slug: 'dalhousie',
-      url: ''
-    },
+  value: 'dalhousie',
+  label: 'The Hoften Blue Magnets, Dalhousie',
+  slug: 'dalhousie',
+  url: 'https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id=cee239fd-433d-4700-bd55-67795c3eca05&type=2'
+},
   ];
 
   const checkInDatePickerRef = useRef(null);
@@ -198,7 +198,7 @@ const handleEnquirySubmit = async () => {
   let bookingUrl = selectedHotel.url;
   const checkIn = formatDate(rangeStart);
   const checkOut = formatDate(rangeEnd);
-  if (selectedHotel.value === 'jawai' || selectedHotel.value === 'lansdowne' || selectedHotel.value === 'dalhousie' ) {
+  if (selectedHotel.value === 'jawai' || selectedHotel.value === 'lansdowne' ) {
   setShowPopupForm(true); // show popup instead of opening URL
   return;
 }
@@ -232,6 +232,24 @@ const handleEnquirySubmit = async () => {
     bookingUrl += `&adult${index}=${row.count1}&child${index}=${row.count2}`;
   });
   bookingUrl += `&gsId=981NJ8TQ49ro3Z7RTrbLaPgGZCWk8ihVQvzMylYvu085aOhvZIjS2TE3NTc=&RoomID=184902,184903,185018,185019,184904,185017,185949`;
+}
+else if (selectedHotel.value === 'dalhousie') {
+  const roomPropertyId = 'cee239fd-433d-4700-bd55-67795c3eca05';
+
+  let guestParams = [];
+
+  formRows.forEach((row, index) => {
+    const roomIndex = index + 1;
+    if (row.count1 > 0) guestParams.push(`ac${roomIndex}=${row.count1}`);
+    if (row.count2 > 0) guestParams.push(`cc${roomIndex}=${row.count2}`);
+  });
+
+  const guestString = `[${guestParams.join(',')}]`;
+
+  bookingUrl = `https://alivaahotels.securedreservations.com/reservation?bID=6d7880d9-c05f-4be6-811f-eeb846d0c59d&cID=f1c6c3f5-04d5-4180-9895-7f3e3f6b240c&destination=id=${roomPropertyId}&type=2&checkInDate=${checkIn}&checkOutDate=${checkOut}&guest=${encodeURIComponent(guestString)}&roomPropertyID=${roomPropertyId}`;
+
+  window.open(bookingUrl, "_blank");
+  return;
 }
 
   window.open(bookingUrl, "_blank");
