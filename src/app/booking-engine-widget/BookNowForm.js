@@ -376,7 +376,11 @@ else if (selectedHotel.value === 'dalhousie') {
                         </div>
                       </div>
                     ))}
-                    <button onClick={addNewRow} className="yellow-btn btn">Add Room</button>
+                                      {formRows.length < 5 ? (
+                                        <button onClick={addNewRow} className="yellow-btn btn">Add Room</button>
+                                      ) : (
+                                        <div style={{ color: 'red', fontSize: '12px', marginTop: '10px' }}>Maximum 5 rooms allowed</div>
+                                      )}
                   </div>
                 </div>
               )}

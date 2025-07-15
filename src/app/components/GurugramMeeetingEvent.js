@@ -40,7 +40,7 @@ const GurugramMeeetingEvent = () => {
     message: '',
     date: '',
     no_of_guest: '',
-    source_enquiry: 'hoften-gurugram-event',
+    source_enquiry: 'alivaa-dalhousie-event',
     web_source: 'alivaahotels.com',
   });
 

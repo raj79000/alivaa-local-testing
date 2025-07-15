@@ -68,6 +68,7 @@ const DalhousieMeeetingEvent = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
       const result = await response.json();
       if (result.status === 'success') {
         setResponseMsg(result.message || 'Form submitted successfully!');
@@ -78,9 +79,10 @@ const DalhousieMeeetingEvent = () => {
           message: '',
           date: '',
           no_of_guest: '',
-          source_enquiry: 'alivaa-mcleodganj-dine',
+          source_enquiry: 'alivaa-dalhousie-event',
           web_source: 'alivaahotels.com',
         });
+        window.location.reload();
       } else {
         setResponseMsg(result.message || 'Submission failed!');
       }
