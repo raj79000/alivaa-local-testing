@@ -4,9 +4,9 @@ export const metadata = {
     alternates: {
       canonical: '/jawai-palash-resort-rooms-suites'
      },
-    title: 'Rooms & Suites at Jawai Palash Resort | Stay in Style',
+    title: 'Rooms & Suites Stay in Jawai Palash Resort - Alivaa Hotels',
     keywords : "",
-    description:"Explore elegant rooms and luxury villas at Jawai Palash Resort, where comfort meets wilderness. Book your serene escape today.", 
+    description:"Experience luxury and comfort with Rooms & Suites stay at Jawai Palash Resort by Alivaa Hotels. Enjoy scenic views, modern amenities, and a peaceful retreat in Jawai. Book your stay today!", 
   }
 
   export default function JawaiAccommodationLayout({

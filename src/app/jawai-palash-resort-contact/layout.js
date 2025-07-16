@@ -4,9 +4,9 @@ export const metadata = {
     alternates: {
       canonical: '/jawai-palash-resort-contact'
      },
-    title: 'Contact Us Jawai Palash Resort | Location & Booking Info',
+    title: 'Jawai Resorts Contact Number - Alivaa Jawai Palash Resort | Location & Address',
     keywords : "",
-    description:"Get in touch with Jawai Palash Resort for bookings, directions, and queries. Call, email, or visit us in the heart of Jawai.", 
+    description:"Looking for Jawai resorts contact number? Reach Alivaa Jawai Palash Resort easily. Find our location, address, and phone number to plan your perfect stay in the heart of Jawai.", 
   }
   
   export default function JawaiContactLayout({

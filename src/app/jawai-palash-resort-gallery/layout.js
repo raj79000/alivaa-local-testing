@@ -4,9 +4,9 @@ export const metadata = {
     alternates: {
       canonical: '/jawai-palash-resort-gallery'
      },
-    title: 'Photo Gallery | A Glimpse of Alivaa Jawai Palash Resort',
+    title: 'Explore Our Image Gallery & Videos - Alivaa Jawai Palash Resort',
     keywords : "",
-    description:"Take a visual tour of Alivaa Jawai Palash Resort. Browse photos that reflect the peaceful ambience, elegant interiors, and natural surroundings.", 
+    description:"Explore our image gallery and videos of Alivaa Jawai Palash Resort. Discover scenic views, luxurious rooms, dining experiences, and unforgettable moments before you book your stay.", 
   }
 
   export default function JawaiPalashResortGalleryLayout({

@@ -4,9 +4,9 @@ export const metadata = {
     alternates: {
       canonical: '/jawai-palash-resort-dining'
      },
-    title: 'Dining at Jawai Palash Resort | Local Flavours & Gourmet Delights',
+    title: 'Restaurants in Jawai | Dining at Jawai Palash Resort | Alivaa Hotels',
     keywords : "",
-    description:"Savour authentic Rajasthani cuisine and gourmet dishes at Jawai Palash Resort. A tasteful experience amidst the wild.", 
+    description:"Discover the best restaurants in Jawai at Jawai Palash Resort by Alivaa Hotels. Enjoy delicious local and multi-cuisine dining in a serene setting. Dine with us for a memorable culinary experience!", 
   }
 
   export default function JawaiPalashDiningLayout({

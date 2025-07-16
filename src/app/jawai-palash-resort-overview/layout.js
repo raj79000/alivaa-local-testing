@@ -4,9 +4,9 @@ export const metadata = {
     alternates: {
       canonical: '/jawai-palash-resort-overview'
      },
-    title: 'Jawai Palash Resort – Luxury Jungle Stay in Jawai | Alivaa Hotels',
+    title: 'Luxury Villa & Resort in Jawai - Alivaa Hotels',
     keywords : "",
-    description:"Discover Jawai Palash Resort, a luxury retreat nestled in the wild beauty of Jawai. Experience nature, comfort, and heritage with Alivaa Hotels.", 
+    description:"Book your stay at Alivaa, a luxurious resort in Jawai. Experience exceptional hospitality, stunning landscapes, and a peaceful retreat. Book now!", 
   }
   
   export default function JawaioverviewLayout({

@@ -4,9 +4,9 @@ export const metadata = {
     alternates: {
       canonical: '/jawai-palash-resort-facilities'
      },
-    title: 'Facilities at Jawai Palash Resort | Jungle Safaris, Pool & More',
+    title: 'Facilities at Jawai Palash Resort | Jungle Safaris, Pool & More - Alivaa Hotels',
     keywords : "",
-    description:"Enjoy top-class facilities at Jawai Palash Resort, including wildlife safaris, swimming pool, nature walks, and personalized hospitality.", 
+    description:"Explore top facilities at Jawai Palash Resort by Alivaa Hotels, including thrilling jungle safaris, a refreshing swimming pool, nature walks, and more. Enjoy a perfect blend of adventure and relaxation!", 
   }
   
   export default function JawaiFacilitiesLayout({
