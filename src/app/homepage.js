@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 // import { useState } from "react";
-import BookNowForm from "./booking-engine-widget/BookNowForm";
+const BookNowForm = dynamic(() => import("./booking-engine-widget/BookNowForm"));
 const Navbar = dynamic(() => import("./components/Navbar"));
 const BannerSocial = dynamic(() => import("./components/BannerSocial"));
 const AboutUs = dynamic(() => import("./components/AboutUs"));
